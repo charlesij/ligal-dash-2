@@ -1,176 +1,1795 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" dir="ltr" data-nav-layout="horizontal" data-nav-style="menu-click" data-menu-position="fixed"
+    data-theme-mode="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Lintas Inovasi Global | Dashboard </title>
+    <meta name="Description" content="Lintas Inovasi Global ">
+    <meta name="Author" content="Lintas Inovasi Global">
 
-        <title>Laravel</title>
+    <link rel="icon" href="{{ asset('assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
+    <link id="style" href="{{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/libs/node-waves/waves.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/libs/swiper/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/flatpickr/flatpickr.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <script>
+        if (localStorage.ligalandingdarktheme) {
+            document.querySelector("html").setAttribute("data-theme-mode", "dark")
+        }
+        if (localStorage.ligalandingrtl) {
+            document.querySelector("html").setAttribute("dir", "rtl")
+            document.querySelector("#style")?.setAttribute("href", "{{ asset('assets/libs/bootstrap/css/bootstrap.rtl.min.css') }}");
+        }
+    </script>
 
-        <!-- Styles / Scripts -->
-        @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
-            @vite(['resources/css/app.css', 'resources/js/app.js'])
-        @else
-            <style>
-                /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-            </style>
-        @endif
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
+
+</head>
+
+<body class="landing-body">
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="switcher-canvas" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Switcher</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="">
+                <p class="switcher-style-head">Theme Color Mode:</p>
+                <div class="row switcher-style">
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-light-theme">
+                                Light
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-light-theme"
+                                checked>
                         </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
-
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
-
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
-
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
-
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
-
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
-
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-check switch-select">
+                            <label class="form-check-label" for="switcher-dark-theme">
+                                Dark
+                            </label>
+                            <input class="form-check-input" type="radio" name="theme-style" id="switcher-dark-theme">
                         </div>
-                    </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
+                    </div>
+                </div>
+            </div>
+            <div class="theme-colors">
+                <p class="switcher-style-head">Theme Primary:</p>
+                <div class="d-flex align-items-center switcher-style">
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-1" type="radio" name="theme-primary"
+                            id="switcher-primary">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-2" type="radio" name="theme-primary"
+                            id="switcher-primary1">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-3" type="radio" name="theme-primary"
+                            id="switcher-primary2">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-4" type="radio" name="theme-primary"
+                            id="switcher-primary3">
+                    </div>
+                    <div class="form-check switch-select me-3">
+                        <input class="form-check-input color-input color-primary-5" type="radio" name="theme-primary"
+                            id="switcher-primary4">
+                    </div>
+                    <div class="form-check switch-select me-3 ps-0 mt-1 color-primary-light">
+                        <div class="theme-container-primary"></div>
+                        <div class="pickr-container-primary"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="switcher-style-head">reset:</p>
+                <div class="text-center">
+                    <button id="reset-all" class="btn btn-danger mt-3">Reset</button>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+
+    <div class="landing-page-wrapper">
+        <header class="app-header">
+            <div class="main-header-container container-fluid">
+                <div class="header-content-left">
+                    <div class="header-element">
+                        <div class="horizontal-logo">
+                            <a href="{{ route('welcome') }}" class="header-logo">
+                                <img src="{{ asset('assets/images/brand-logos/logo-ligal-sm.png') }}" alt="logo" class="toggle-logo">
+                                <img src="{{ asset('assets/images/brand-logos/logo-ligal-sm.png') }}" alt="logo" class="toggle-dark">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-element">
+                        <a href="javascript:void(0);" class="sidemenu-toggle header-link" data-bs-toggle="sidebar">
+                            <span class="open-toggle">
+                                <i class="ri-menu-3-line fs-20"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-content-right">
+                    <div class="header-element align-items-center">
+                        <div class="btn-list d-lg-none d-flex">
+                            <a href="{{ route('sign-up') }}" class="btn btn-secondary-light">
+                                Sign Up
+                            </a>
+                            <button class="btn btn-icon btn-special switcher-icon d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas"
+                                data-bs-target="#switcher-canvas">
+                                <i class="ri-settings-3-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <aside class="app-sidebar sticky" id="sidebar">
+            <div class="container-xl">
+                <div class="main-sidebar">
+                    <nav class="main-menu-container nav nav-pills sub-open">
+                        <div class="landing-logo-container">
+                            <div class="horizontal-logo">
+                                <a href="{{ route('welcome') }}" class="header-logo">
+                                    <img src="{{ asset('assets/images/brand-logos/logo-ligal.png') }}" alt="logo"
+                                        class="desktop-logo">
+                                    <img src="{{ asset('assets/images/brand-logos/logo-ligal.png') }}" alt="logo"
+                                        class="desktop-dark">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="slide-left" id="slide-left"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path>
+                            </svg></div>
+                        <ul class="main-menu">
+                            <li class="slide">
+                                <a class="side-menu__item" href="#home">
+                                    <span class="side-menu__label">Home</span>
+                                </a>
+                            </li>
+                            <li class="slide">
+                                <a href="#about" class="side-menu__item">
+                                    <span class="side-menu__label">About</span>
+                                </a>
+                            </li>
+                            <li class="slide has-sub">
+                                <a href="javascript:void(0);" class="side-menu__item">
+                                    <span class="side-menu__label me-2">More</span>
+                                    <i class="fe fe-chevron-right side-menu__angle op-8"></i>
+                                </a>
+                                <ul class="slide-menu child1">
+                                    <li class="slide">
+                                        <a href="#services" class="side-menu__item">Services</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="#expectations" class="side-menu__item">Expectations</a>
+                                    </li>
+                                    <li class="slide">
+                                        <a href="#features" class="side-menu__item">Features</a>
+                                    </li>
+                                    <li class="slide has-sub">
+                                        <a href="javascript:void(0);" class="side-menu__item">Level-2
+                                            <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                        <ul class="slide-menu child2">
+                                            <li class="slide">
+                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-1</a>
+                                            </li>
+                                            <li class="slide has-sub">
+                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-2
+                                                    <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                                <ul class="slide-menu child3">
+                                                    <li class="slide">
+                                                        <a href="javascript:void(0);"
+                                                            class="side-menu__item">Level-2-2-1</a>
+                                                    </li>
+                                                    <li class="slide has-sub">
+                                                        <a href="javascript:void(0);"
+                                                            class="side-menu__item">Level-2-2-2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="slide">
+                                <a href="#pricing" class="side-menu__item">
+                                    <span class="side-menu__label">Pricing</span>
+                                </a>
+                            </li>
+                            <li class="slide">
+                                <a href="#team" class="side-menu__item">
+                                    <span class="side-menu__label">Team</span>
+                                </a>
+                            </li>
+                            <li class="slide">
+                                <a href="#faqs" class="side-menu__item">
+                                    <span class="side-menu__label">FAQ's</span>
+                                </a>
+                            </li>
+                            <li class="slide">
+                                <a href="#testimonials" class="side-menu__item">
+                                    <span class="side-menu__label">Testimonials</span>
+                                </a>
+                            </li>
+                            <li class="slide">
+                                <a href="#contact" class="side-menu__item">
+                                    <span class="side-menu__label">Contact Us</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191"
+                                width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z">
+                                </path>
+                            </svg></div>
+                        <div class="d-lg-flex d-none">
+                            <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0">
+                                <a href="{{ route('sign-up') }}" class="btn btn-wave btn-primary">
+                                    Sign Up
+                                </a>
+                                <button class="btn btn-wave btn-icon btn-secondary switcher-icon d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas"
+                                    data-bs-target="#switcher-canvas">
+                                    <i class="ri-settings-3-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+        </aside>
+        <div class="main-content landing-main px-0">
+            <div class="landing-banner" id="home">
+                <section class="section">
+                    <div class="container main-banner-container pb-lg-0">
+                        <div class="row">
+                            <div class="col-xxl-8 col-xl-7 col-lg-7 col-md-8">
+                                <div class="pt-lg-5">
+                                    <div class="mb-3">
+                                        <h6 class="fw-medium text-fixed-white op-9">Powerful and Efficient</h6>
+                                    </div>
+                                    <p class="landing-banner-heading mb-3 text-fixed-white fw-semibold">Powerful Backend Application,  <span class="text-warning">LIGAL</span> Web Apps</p>
+                                    <div class="fs-16 mb-5 text-fixed-white op-7">Empower your business with cutting-edge backend solutions. Backed by a professional team at Lintas Inovasi Global, we deliver tailored logic, analytics, and efficient features to meet your unique needs.</div>
+                                    <a href="{{ route('dashboard') }}" class="m-1 btn btn-lg bg-secondary text-fixed-white">
+                                        View Demos
+                                        <i class="ri-eye-line ms-2 align-middle"></i>
+                                    </a>
+                                    <a href="{{ route('dashboard') }}"
+                                        class="m-1 btn btn-lg btn-special btn-wave waves-effect waves-light">
+                                        Learn More
+                                        <i class="ri-arrow-right-line ms-2 align-middle"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-4 my-auto position-relative">
+                                <div class="text-end landing-main-image landing-heading-img">
+                                    <img src="{{ asset('') }}assets/images/media/rocket.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="side-img-bg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 700 700" style="overflow: hidden; display: block;" width="700" height="700"><defs><linearGradient id="two-163" x1="350" y1="-350" x2="350" y2="350" spreadMethod="pad" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="hsl(1.4, 100%, 67%)" stop-opacity="1"></stop><stop offset="100%" stop-color="hsl(167, 52%, 78%)" stop-opacity="1"></stop></linearGradient></defs><g id="two-0" transform="matrix(1 0 0 1 0 0)" opacity="1"><path transform="matrix(1 0 0 1 350 350)" id="two-213" d="M 237.85514 98.522825 C 227.062517 131.662812 219.074086 169.801869 195.095167 195.095167 C 171.051113 220.45717 130.070898 224.158279 100.684106 243.072935 C 64.937066 266.081332 42.380709 320.101632 0 323.4352 C -41.034117 326.662848 -75.939076 287.066961 -108.451391 261.824818 C -136.725275 239.87334 -158.984007 209.593513 -183.732535 183.732534 C -208.039029 158.333458 -235.224881 134.012468 -257.107091 106.497244 C -283.326775 73.527975 -318.380622 41.129234 -327.481752 0 C -336.690408 -41.615158 -333.90373 -93.598788 -308.385856 -127.737604 C -281.519872 -163.679977 -216.430462 -152.974506 -185.093668 -185.093668 C -153.021223 -217.966846 -172.127834 -295.546588 -129.52009 -312.689158 C -86.559482 -329.973697 -44.807453 -270.381947 -0.000001 -258.691719 C 32.86618 -250.116959 68.360799 -249.221147 102.24339 -246.837381 C 148.692933 -243.569483 207.63395 -273.235515 243.30323 -243.303231 C 277.21985 -214.841712 267.600266 -156.010774 269.894333 -111.793894 C 271.81461 -74.781613 264.844751 -36.621516 259.147299 -0.000001 C 254.033847 32.867732 248.155407 66.894677 237.85514 98.522825 Z " fill="rgba(255,255,255,0.1)" stroke="undefined" stroke-width="1" stroke-opacity="1" fill-opacity="1" visibility="visible" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="4"></path></g></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="landing-shape">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 2400 800" opacity="1"><g fill="##f5f6fa" transform="matrix(1,0,0,1,4.3314208984375,317.0009536743164)"><path d="M-10,10C92.08333333333334,16.041666666666664,277.9166666666667,49.20833333333333,480,39C682.0833333333333,28.791666666666668,760,-39.416666666666664,960,-39C1160,-38.583333333333336,1240,40.166666666666664,1440,41C1640,41.833333333333336,1720,-38.125,1920,-35C2120,-31.875,2247.9166666666665,-34.625,2400,56C2552.0833333333335,146.625,3254.1666666666665,224.16666666666669,2650,400C2045.8333333333335,575.8333333333333,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,35)" opacity="0.05"></path><path d="M-10,10C92.08333333333334,16.041666666666664,277.9166666666667,49.20833333333333,480,39C682.0833333333333,28.791666666666668,760,-39.416666666666664,960,-39C1160,-38.583333333333336,1240,40.166666666666664,1440,41C1640,41.833333333333336,1720,-38.125,1920,-35C2120,-31.875,2247.9166666666665,-34.625,2400,56C2552.0833333333335,146.625,3254.1666666666665,224.16666666666669,2650,400C2045.8333333333335,575.8333333333333,156.25,795.8333333333334,-500,900" transform="matrix(1,0,0,1,0,70)" opacity="1.00"></path></g></svg>  
+                    </div>
+                </section>
+            </div>
+            <section class="section pt-5" id="about">
+                <div class="container position-relative">
+                    <div class="text-center">
+                        <span class="landing-text-heading">Glance</span>
+                        <h3 class="fw-semibold mb-2 mt-3">Why Choose Our Services?</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7">
+                                <p class="text-muted fs-15 mb-5 fw-normal">We are dedicated to supporting you in achieving your objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4">
+                            <div class="card custom-card landing-card landingmain border">
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <span class="avatar avatar-xl bg-primary-transparent">
+                                            <span class="avatar avatar-lg bg-primary svg-white">
+                                                <i class="ri-lightbulb-flash-line fs-25"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h5 class="fw-semibold">Unparalleled Expertise</h5>
+                                    <p class="fs-14 text-muted">Our team combines years of industry experience with a deep understanding of the latest trends and technologies to deliver exceptional results.</p>
+                                    <a href="javascript:void(0);" class="fw-medium text-primary">Read More <i
+                                            class="ti ti-arrow-narrow-right ms-2 fs-5 align-middle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4">
+                            <div class="card custom-card landing-card landingmain border">
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <span class="avatar avatar-xl bg-secondary-transparent">
+                                            <span class="avatar avatar-lg bg-secondary svg-white">
+                                                <i class="ri-shield-star-line fs-25"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h5 class="fw-semibold">Proven Track Record</h5>
+                                    <p class="fs-14 text-muted">With a portfolio of successful projects and satisfied clients, we have a history of delivering high-quality outcomes on time and within budget.</p>
+                                    <a href="javascript:void(0);" class="fw-medium text-primary">Read More<i
+                                            class="ti ti-arrow-narrow-right ms-2 fs-5 al align-middle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        {{-- <div class="col-xl-4">
+                            <div class="card custom-card landing-card landingmain border">
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <span class="avatar avatar-xl bg-success-transparent">
+                                            <span class="avatar avatar-lg bg-success svg-white">
+                                                <i class="ri-shake-hands-line fs-25"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h5 class="fw-semibold">Commitment to Quality</h5>
+                                    <p class="fs-14 text-muted"> We are dedicated to maintaining the highest standards in everything we do, from the initial consultation to the final delivery.</p>
+                                    <a href="javascript:void(0);" class="fw-medium text-primary">Read More<i
+                                            class="ti ti-arrow-narrow-right ms-2 fs-5 align-middle"></i></a>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="col-xl-4">
+                            <div class="card custom-card landing-card landingmain border">
+                                <div class="card-body">
+                                    <div class="mb-4">
+                                        <span class="avatar avatar-xl bg-special-transparent">
+                                            <span class="avatar avatar-lg bg-special svg-white">
+                                                <i class="ri-medal-2-line fs-25"></i>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h5 class="fw-semibold">Efficiency is Our Souls</h5>
+                                    <p class="fs-14 text-muted">We prioritize efficiency in every step, ensuring optimal performance and seamless delivery from start to finish.</p>
+                                    <a href="javascript:void(0);" class="fw-medium text-primary">Read More<i
+                                            class="ti ti-arrow-narrow-right ms-2 fs-5 align-middle"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section section-bg" id="expectations">
+                <div class="container">
+                    <div class="row gx-5 mx-0">
+                        <div class="col-xl-5">
+                            <div class="home-proving-image d-none d-xl-block">
+                                <img src="{{ asset('') }}assets/images/media/mail-truck.png" alt="" class="img-fluid about-image">
+                            </div>
+                            <div class="proving-pattern-1"></div>   
+                        </div>
+                        <div class="col-xl-7 my-auto">
+                            <div class="heading-section text-start mb-4">
+                                <span class="landing-text-heading">About Us</span>
+                                <h3 class="mt-3 fw-semibold mb-2">Delivering More Than Expected!</h3>
+                                <div class="heading-description fs-16 text-muted">Welcome to Ligal Admin Dashboard, where we create a fast and personalized experience designed to surpass your expectations. Choose us and discover what true power feels like.</div>
+                            </div>
+                            <div class="row gy-3 mb-0">
+                                <div class="col-xl-12">
+                                    <div class="d-flex align-items-top">
+                                        <div class="me-2 home-prove-svg">
+                                            <i class="ri-arrow-right-circle-line align-middle fs-16 text-primary d-inline-block"></i>
+                                        </div>
+                                        <div>
+                                            <span class="fs-15">
+                                                Having accumulated years of experience, we have earned a reputable standing in our field.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="d-flex align-items-top">
+                                        <div class="me-2 home-prove-svg">
+                                            <i class="ri-arrow-right-circle-line align-middle fs-16 text-primary d-inline-block"></i>
+                                        </div>
+                                        <div>
+                                            <span class="fs-15">
+                                                We have assembled a team of knowledgeable and proficient individuals.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="d-flex align-items-top">
+                                        <div class="me-2 home-prove-svg">
+                                            <i class="ri-arrow-right-circle-line align-middle fs-16 text-primary d-inline-block"></i>
+                                        </div>
+                                        <div>
+                                            <span class="fs-15">
+                                                We recognize that every client is unique, and we customize our services accordingly.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="d-flex align-items-top">
+                                        <div class="me-2 home-prove-svg">
+                                            <i class="ri-arrow-right-circle-line align-middle fs-16 text-primary d-inline-block"></i>
+                                        </div>
+                                        <div>
+                                            <span class="fs-15">
+                                                Designed with convenience in mind, our services aim to make your experience effortless.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12">
+                                    <div class="d-flex align-items-top">
+                                        <div class="me-2 home-prove-svg">
+                                            <i class="ri-arrow-right-circle-line align-middle fs-16 text-primary d-inline-block"></i>
+                                        </div>
+                                        <div>
+                                            <span class="fs-15">
+                                                Our support is available around the clock, every day of the year.
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="services">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="landing-text-heading">Services</span>
+                        <h3 class="fw-semibold mt-3 mb-2">Premium Services at Your Fingertips</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7">
+                                <p class="text-muted fs-15 mb-5 fw-normal">enjoying top-tier services with ease and convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-primary mx-auto svg-container primary svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path
+                                                    d="M215,168.71a96.42,96.42,0,0,1-30.54,37l-9.36-9.37a8,8,0,0,0-3.63-2.09L150,188.59a8,8,0,0,1-5.88-8.9l2.38-16.2a8,8,0,0,1,4.84-6.22l30.46-12.66a8,8,0,0,1,8.47,1.49ZM159.89,105,182.06,79.2A8,8,0,0,0,184,74V50A96,96,0,0,0,50.49,184.65l9.92-6.52A8,8,0,0,0,64,171.49l.21-36.23a8.06,8.06,0,0,1,1.35-4.41l20.94-31.3a8,8,0,0,1,11.34-2l19.81,13a8.06,8.06,0,0,0,5.77,1.45l31.46-4.26A8,8,0,0,0,159.89,105Z"
+                                                    opacity="0.2"></path>
+                                                <path
+                                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,16a87.5,87.5,0,0,1,48,14.28V74L153.83,99.74,122.36,104l-.31-.22L102.38,90.92A16,16,0,0,0,79.87,95.1L58.93,126.4a16,16,0,0,0-2.7,8.81L56,171.44l-3.27,2.15A88,88,0,0,1,128,40ZM62.29,186.47l2.52-1.65A16,16,0,0,0,72,171.53l.21-36.23L93.17,104a3.62,3.62,0,0,0,.32.22l19.67,12.87a15.94,15.94,0,0,0,11.35,2.77L156,115.59a16,16,0,0,0,10-5.41l22.17-25.76A16,16,0,0,0,192,74V67.67A87.87,87.87,0,0,1,211.77,155l-16.14-14.76a16,16,0,0,0-16.93-3l-30.46,12.65a16.08,16.08,0,0,0-9.68,12.45l-2.39,16.19a16,16,0,0,0,11.77,17.81L169.4,202l2.36,2.37A87.88,87.88,0,0,1,62.29,186.47ZM185,195l-4.3-4.31a16,16,0,0,0-7.26-4.18L152,180.85l2.39-16.19L184.84,152,205,170.48A88.43,88.43,0,0,1,185,195Z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <h6 class="fw-semibold">Business Analytics</h6>
+                                    <p class="fs-15 text-muted mb-0">Delivering real-time data updates and actionable insights to keep your business ahead of the curve.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <div class="mb-4">
+                                            <span
+                                                class="svg-gradient avatar avatar-lg bg-secondary mx-auto svg-container secondary svg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                    fill="#000000" viewBox="0 0 256 256">
+                                                    <path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z"
+                                                        opacity="0.2"></path>
+                                                    <path
+                                                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-4v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h4V72a8,8,0,0,1,16,0v8h16a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h6 class="fw-semibold">Marketing</h6>
+                                    <p class="fs-15 text-muted mb-0">Empowering clients with cutting-edge tools to optimize sales strategies and achieve unmatched dashboard efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <div class="mb-4">
+                                            <span
+                                                class="svg-gradient avatar avatar-lg bg-success mx-auto svg-container success svg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                    fill="#000000" viewBox="0 0 256 256">
+                                                    <path d="M208,40V208H152V40Z" opacity="0.2"></path>
+                                                    <path
+                                                        d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z">
+                                                    </path>
+                                                </svg>
+                                                </span>
+                                        </div>
+                                    </div>
+                                    <h6 class="fw-semibold">Dynamic Charts</h6>
+                                    <p class="fs-15 text-muted mb-0">Transforming raw data into interactive, visually engaging insights that empower smarter decisions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-info mx-auto svg-container info svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path d="M224,64l-12.16,66.86A16,16,0,0,1,196.1,144H70.55L56,64Z"
+                                                    opacity="0.2"></path>
+                                                <path
+                                                    d="M230.14,58.87A8,8,0,0,0,224,56H62.68L56.6,22.57A8,8,0,0,0,48.73,16H24a8,8,0,0,0,0,16h18L67.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,160,204a28,28,0,1,0,28-28H91.17a8,8,0,0,1-7.87-6.57L80.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,230.14,58.87ZM104,204a12,12,0,1,1-12-12A12,12,0,0,1,104,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,200,204Zm4-74.57A8,8,0,0,1,196.1,136H77.22L65.59,72H214.41Z">
+                                                </path>
+                                            </svg>
+                                            </span>
+                                    </div>
+                                    <h6 class="fw-semibold">Ecommerce</h6>
+                                    <p class="fs-15 text-muted mb-0">E-commerce business logic such as efficient payment gateway, social media sharelink, and much more.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-warning mx-auto svg-container warning svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-robot">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                                <path d="M6 4m0 2a2 2 0 0 1 2 -2h8a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2z" />
+                                                <path d="M12 2v2" />
+                                                <path d="M9 12v9" />
+                                                <path d="M15 12v9" />
+                                                <path d="M5 16l4 -2" />
+                                                <path d="M15 14l4 2" />
+                                                <path d="M9 18h6" />
+                                                <path d="M10 8v.01" />
+                                                <path d="M14 8v.01" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <h6 class="fw-semibold">AI Powered</h6>
+                                    <p class="fs-15 text-muted mb-0">Harnessing the power of AI, including intelligent chatbots, to enhance user experience and streamline your operations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-teal mx-auto svg-container teal svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path d="M224,56l-96,88L32,56Z" opacity="0.2"></path>
+                                                <path
+                                                    d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z">
+                                                </path>
+                                            </svg>
+                                            </span>
+                                    </div>
+                                    <h6 class="fw-semibold">Email Services</h6>
+                                    <p class="fs-15 text-muted mb-0">Effortlessly manage your communication with our seamless and secure email solutions, tailored to keep you connected.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-danger mx-auto svg-container danger svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path d="M168,100a60,60,0,1,1-60-60A60,60,0,0,1,168,100Z" opacity="0.2">
+                                                </path>
+                                                <path
+                                                    d="M144,157.68a68,68,0,1,0-71.9,0c-20.65,6.76-39.23,19.39-54.17,37.17a8,8,0,0,0,12.25,10.3C50.25,181.19,77.91,168,108,168s57.75,13.19,77.87,37.15a8,8,0,0,0,12.25-10.3C183.18,177.07,164.6,164.44,144,157.68ZM56,100a52,52,0,1,1,52,52A52.06,52.06,0,0,1,56,100Zm197.66,33.66-32,32a8,8,0,0,1-11.32,0l-16-16a8,8,0,0,1,11.32-11.32L216,148.69l26.34-26.35a8,8,0,0,1,11.32,11.32Z">
+                                                </path>
+                                            </svg>
+                                            </span>
+                                    </div>
+                                    <h6 class="fw-semibold">Skilled</h6>
+                                    <p class="fs-15 text-muted mb-0">Our team brings unparalleled expertise and dedication to every project, ensuring top-notch results that exceed expectations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card custom-card landing-card">
+                                <div class="card-body text-center">
+                                    <div class="mb-4">
+                                        <span
+                                            class="svg-gradient avatar avatar-lg bg-pink mx-auto svg-container pink svg-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                                fill="#000000" viewBox="0 0 256 256">
+                                                <path d="M216,48V88H40V48a8,8,0,0,1,8-8H208A8,8,0,0,1,216,48Z"
+                                                    opacity="0.2"></path>
+                                                <path
+                                                    d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-38.34-85.66a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L116,164.69l42.34-42.35A8,8,0,0,1,169.66,122.34Z">
+                                                </path>
+                                            </svg>
+                                            </span>
+                                    </div>
+                                    <h6 class="fw-semibold">Planning</h6>
+                                    <p class="fs-15 text-muted mb-0">Craft precise, goal-oriented plans to help you navigate challenges and achieve business objectives with confidence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section landing-Features" id="features">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                            <div class="heading-section text-center mb-0">
+                                <span class="landing-text-heading dark-text">Tech-stack</span>
+                                <h3 class="text-fixed-white text-center mt-3 fw-medium">Technology Used</h3>
+                                <div class="fs-16 text-fixed-white text-center op-8">Built using robust backend technologies including PHP, Laravel, MySQL, SQLite, and MongoDB, delivering seamless performance and flexibility to handle diverse application needs.</div>
+                                <div class="mt-4 mb-5 d-flex align-items-center justify-content-center">
+                                    <a href="{{ route('dashboard') }}" class="btn bg-white-transparent me-3 mb-sm-0">Get Started
+                                        Now</a>
+                                    <a href="{{ route('dashboard') }}"
+                                        class="btn text-fixed-white border border-white border-opacity-25 btn-wave waves-effect waves-light">Discover
+                                        More<i class="fe fe-arrow-right fs-14 align-text-bottom ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 my-auto">
+                            <div class="d-flex align-items-center justify-content-center trusted-companies sub-card-companies flex-wrap mb-3 mb-xl-0 gap-4">
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--aws.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--docker-icon.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--laravel.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--php.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--nodejs-icon.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--nestjs.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--javascript.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--mysql.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--mongodb.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--firebase.png" alt="img">
+                                </div>
+                                <div class="trust-img">
+                                    <img src="{{ asset('') }}assets/images/media/landing/logos--google-gemini.png" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="team">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="landing-text-heading">Our Team</span>
+                        <h3 class="fw-semibold mt-3 mb-2">The Team Behind Our Success</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7">
+                                <p class="text-muted fs-15 mb-5 fw-normal">Our team consists of dedicated individuals who are truly passionate about their work.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-primary-transparent avatar-rounded mb-3 border border-5 border-primary border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-1.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Diki Hidayatullah</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-primary">Server-side Developer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specialize in most of server-side task such as docker container, server deployment and other backend technologies.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-secondary-transparent avatar-rounded mb-3  border border-5 border-secondary border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-2.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Maryo Pane</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-secondary">Frontend Developer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specialize in most of all frontend task such as SEO, UI/UX, and mostly using reactjs and nextjs.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-special-transparent avatar-rounded mb-3 border border-5 border-special border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-3.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Charles</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-special">Backend Developer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specialize in learning new tech stack, mastering most of Laravel ecosystem also can write in Javascript frameworks.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-info-transparent avatar-rounded mb-3 border border-5 border-info border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-4.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Irwan Setiawan</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-info">Backend Developer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specialize in server-side scripting, master in Laravel API, and most business logic, also making secure apps efficiently.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-success-transparent avatar-rounded mb-3 border border-5 border-success border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-5.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Ein Carvi</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-success">Android Package Kit Developer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Using React Native to its fullest potential, delivering seamless cross-platform applications with robust business logic and intuitive user experiences, tailored for scalability and performance.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-warning-transparent avatar-rounded mb-3 border border-5 border-warning border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-6.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Renaldy Adrian Subrata</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-warning">UI/UX Designer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specializing in crafting intuitive and visually captivating user interfaces, enhancing user experiences with seamless navigation, 2D animations, and engaging banners. Collaborating closely with Frontend Developers to bring designs to life with precision.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-lg-0 mb-4">
+                            <div class="card custom-card team-member">
+                                <div class="card-body text-center p-4">
+                                        <span class="avatar avatar-xxl bg-danger-transparent avatar-rounded mb-3 border border-5 border-danger border-opacity-10">
+                                            <img src="{{ asset('') }}assets/images/faces/team/profile-7.webp" class="card-img" alt="...">
+                                        </span>
+                                        <div class="text-center py-2">
+                                            <h5 class="mb-0 fw-medium">Eko Wijaya</h5>
+                                            <p class="mb-1 fs-14 fw-medium text-danger">Art Designer</p>
+                                            <p class="mb-0 fs-13 text-muted op-8">Specialize in 3D model creation, skilled in using advanced design tools to bring ideas to life. Also proficient in designing intuitive UI/UX for back-office dashboards, blending functionality with aesthetic appeal.</p>
+                                                <div class="d-flex justify-content-center mt-3">
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-bg" id="pricing">
+                <div class="container">
+                    <div class="text-center">
+                        <span class="landing-text-heading">Pricing</span>
+                        <h3 class="fw-semibold mt-3 mb-2">We Provide the Most Competitive Pricing</h3>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7">
+                                <p class="text-muted fs-15 mb-5 fw-normal">Our plans are designed to be highly affordable, catering to every category with a focus on value and accessibility.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex align-items-center justify-content-center mb-5">
+                        <div class="col-lg-8 col-xl-4 col-xxl-4 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card pricing-card1 border shadow-xs">
+                                <div class="card-body p-4">
+                                    <div class="d-flex gap-3 align-items-center p-1">
+                                        <div class="p-2 border d-inline-block border-secondary rounded border-opacity-10 bg-secondary-transparent">
+                                            <span class="avatar avatar-md bg-secondary svg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                                                    <path d="M80,104V208H32a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8Z" opacity="0.2">
+                                                    </path>
+                                                    <path d="M234,80.12A24,24,0,0,0,216,72H160V56a40,40,0,0,0-40-40,8,8,0,0,0-7.16,4.42L75.06,96H32a16,16,0,0,0-16,16v88a16,16,0,0,0,16,16H204a24,24,0,0,0,23.82-21l12-96A24,24,0,0,0,234,80.12ZM32,112H72v88H32ZM223.94,97l-12,96a8,8,0,0,1-7.94,7H88V105.89l36.71-73.43A24,24,0,0,1,144,56V80a8,8,0,0,0,8,8h64a8,8,0,0,1,7.94,9Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-start">
+                                            <h4 class="fw-medium mb-1">Promo</h4> <span class="mb-1 text-muted d-block">Essential features for a magical
+                                                start</span>
+                                        </div>
+                                    </div>
+                                    <hr class="border-top my-4">
+                                    <div>
+                                        <h2 class="mb-0 fw-semibold d-block">IDR 99.800/<span class="fs-12 fw-medium ms-1">Per Month</span></h2> <span class="text-muted fs-14"><span class="me-2 fw-semibold">+3/</span>Website Per month</span>
+                                    </div>
+                                    <div class="text-center my-3 pricing-barrier">
+                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Current Plan</span>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body">
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-secondary-transparent rounded-pill">Unlimited</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">7 Days</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">30 Days</span> </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg mt-4 btn-secondary-light d-grid w-100 btn-wave waves-effect waves-light">
+                                        <span class="ms-4 me-4">Schedule a Demo</span> </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-4 col-xxl-4 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card pricing-card1 border shadow-xs">
+                                <div class="card-body p-4">
+                                    <div class="d-flex gap-3 align-items-center p-1">
+                                        <div class="p-2 border d-inline-block border-primary rounded border-opacity-10 bg-primary-transparent">
+                                            <span class="avatar avatar-md bg-primary svg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                                                    <path d="M128,48v80H40.87A146.29,146.29,0,0,1,40,112V56a8,8,0,0,1,8-8Zm0,80V232s78.06-21.3,87.13-104Z" opacity="0.2"></path>
+                                                    <path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.27,47,25.53a8,8,0,0,0,4.2,0c1-.26,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40ZM120,220.55a130.85,130.85,0,0,1-30.93-18.74c-21.15-17.3-34.2-39.37-39-65.81H120ZM120,120H48.23c-.15-2.63-.23-5.29-.23-8l0-56h72Zm47.4,81.42A131.31,131.31,0,0,1,136,220.53V136h69.91C201.16,162.24,188.27,184.18,167.4,201.42ZM208,112c0,2.71-.08,5.37-.23,8H136V56h72Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-start">
+                                            <h4 class="fw-medium mb-1">Growth</h4> <span class="mb-1 text-muted d-block">Essential
+                                                features for a magical start</span>
+                                        </div>
+                                    </div>
+                                    <hr class="border-top my-4">
+                                    <div>
+                                        <h2 class="mb-0 fw-semibold d-block ">IDR 499.800/<span class="fs-12  fw-medium ms-1">Per Month</span></h2> <span class="text-muted fs-14"><span class=" me-2 fw-semibold">+5/</span>Websites Per month</span>
+                                    </div>
+                                    <div class="text-center my-3 pricing-barrier">
+                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Reccomonded</span>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body">
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-primary-transparent rounded-pill">New</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">15 Days</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">45 Days</span> </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg mt-4 btn-primary d-grid w-100 btn-wave waves-effect waves-light">
+                                        <span class="ms-4 me-4">Schedule a Demo</span> </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-4 col-xxl-4 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card pricing-card1 border shadow-xs">
+                                <div class="card-body p-4">
+                                    <div class="d-flex gap-3 align-items-center p-1">
+                                        <div class="p-2 border d-inline-block border-success rounded border-opacity-10 bg-success-transparent">
+                                            <span class="avatar avatar-md bg-success svg-white">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
+                                                    <path d="M209,81l-33,31,32,88-24,24-48-72-24,24v24L88,224,72,184,32,168l24-24H80l24-24L32,72,56,48l88,32,31-33A24,24,0,0,1,209,81Z" opacity="0.2"></path>
+                                                    <path d="M185.33,114.21l29.14-27.43.17-.16a32,32,0,0,0-45.26-45.26l-.16.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.89A8,8,0,0,0,136.8,144a7.09,7.09,0,0,0-.79,0,8,8,0,0,0-5.66,2.34l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2l30.94-32.88A16,16,0,0,1,203.4,75.22l-32.87,30.94a8,8,0,0,0-2,8.56l30.26,83.22Z">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                        <div class="text-start">
+                                            <h4 class="fw-medium mb-1">Professional</h4> <span class="mb-1 text-muted d-block">Pinnacle excellence, VIP support.</span>
+                                        </div>
+                                    </div>
+                                    <hr class="border-top my-4">
+                                    <div>
+                                        <h2 class="mb-0 fw-semibold d-block ">Contact Us/<span class="fs-12  fw-medium ms-1">For More Requests</span></h2> <span class="text-muted fs-14"><span class=" me-2 fw-semibold"></span></span>
+                                    </div>
+                                    <div class="text-center my-3 pricing-barrier">
+                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">New Plan</span>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body">
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-success-transparent rounded-pill">Newt</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">14 Days</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">60 Days</span> </div>
+                                        </li>
+                                    </ul>
+                                    <button type="button" class="btn btn-lg btn-success-light mt-4 d-grid w-100 btn-wave waves-effect waves-light">
+                                        <span class="ms-4 me-4">Schedule a Demo</span> </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" id="faqs">
+                <div class="container text-center">
+                    <span class="landing-text-heading">F.A.Q 's</span>
+                    <h3 class="fw-semibold mt-3 mb-2">Frequently asked questions ?</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-7">
+                            <p class="text-muted fs-15 mb-5 fw-normal">We have shared some of the most frequently asked
+                                questions to help you out.</p>
+                        </div>
+                    </div>
+                    <div class="row text-start">
+                        <div class="col-xl-12">
+                            <div class="row gy-2">
+                                <div class="col-xl-6">
+                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
+                                        id="accordionFAQ1">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1One">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon1One" aria-expanded="true"
+                                                    aria-controls="collapsecustomicon1One">
+                                                    Where can I sign up for your newsletter?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1One" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingcustomicon1One" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Two">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Two"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon1Two">
+                                                    Where can in edit my address?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Two" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Two" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Three">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Three"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon1Three">
+                                                    What are your opening hours?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Three" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Three"
+                                                data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Four">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Four"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon1Four">
+                                                    Do I have the right to return an item?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Four" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Four"
+                                                data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Five">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Five"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon1Five">
+                                                    General Terms & Conditions (GTC)
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Five" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Five"
+                                                data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon1Six">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Six"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon1Six">
+                                                    Do I need to create an account to make an order?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon1Six" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon1Six" data-bs-parent="#accordionFAQ1">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
+                                        id="accordionFAQ2">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Five">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Five"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon2Five">
+                                                    General Terms & Conditions (GTC)
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Five" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Five"
+                                                data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Six">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Six"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon2Six">
+                                                    Do I need to create an account to make an order?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Six" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Six" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2One">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2One"
+                                                    aria-expanded="true" aria-controls="collapsecustomicon2One">
+                                                    Where can I subscribe to your newsletter?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2One" class="accordion-collapse collapse "
+                                                aria-labelledby="headingcustomicon2One" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Two">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Two"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon2Two">
+                                                    Where can in edit my address?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Two" data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Three">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Three"
+                                                    aria-expanded="false" aria-controls="collapsecustomicon2Three">
+                                                    What are your opening hours?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
+                                                aria-labelledby="headingcustomicon2Three"
+                                                data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingcustomicon2Four">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapsecustomicon2Four" aria-expanded="false"
+                                                    aria-controls="collapsecustomicon2Four">
+                                                    Do I have the right to return an item?
+                                                </button>
+                                            </h2>
+                                            <div id="collapsecustomicon2Four" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingcustomicon2Four"
+                                                data-bs-parent="#accordionFAQ2">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we
+                                                    use to style each element. These classes control the overall
+                                                    appearance,
+                                                    as well as the showing and hiding via CSS transitions. You can
+                                                    modify
+                                                    any of this with custom CSS or overriding our default variables.
+                                                    It's
+                                                    also worth noting that just about any HTML can go within the
+                                                    <code>.accordion-body</code>, though the transition does limit
+                                                    overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section landing-Features" id="testimonials">
+                <div class="container reviews-container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10">
+                            <div class="text-center mb-0 mt-4 heading-section">
+                                <span class="landing-text-heading dark-text">Testimonals</span>
+                                <div class="h3 mt-3 text-fixed-white">See What People Are Saying About Us</div>
+                                <div class="fs-15 text-fixed-white mb-4 op-8">Customer satisfaction and experience are our top priorities.</div>
+                            </div>
+                        </div>
+                        <div class="col-xl-10">
+                            <div class="swiper pagination-dynamic testimonialSwiperService">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="card mb-0">
+                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
+                                            <div class="card-body">
+                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
+                                                    <img src="{{ asset('') }}assets/images/faces/1.jpg" alt="img"
+                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
+                                                    <div>
+                                                        <h6 class="mb-0 text-fixed-white">
+                                                            Autumn Quinn</h6>
+                                                        <span class="fs-12 text-fixed-white">User since 2023</span>
+                                                    </div>
+                                                </div>
+                                                <span class="">The sleek design immediately caught my eye, and the
+                                                    functionality sealed the deal. It's not just eye candy; it
+                                                    performs
+                                                    exceptionally well -- <a href="javascript:void(0);"
+                                                        class="fw-semibold text-fixed-white op-6 fs-11"
+                                                       >Read
+                                                        More</a></span>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <div class="">
+                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
+                                                        <span class="text-warning d-block">
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="text-success fs-12">9 Days Ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card mb-0">
+                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
+                                            <div class="card-body">
+                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
+                                                    <img src="{{ asset('') }}assets/images/faces/2.jpg" alt="img"
+                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
+                                                    <div>
+                                                        <h6 class="mb-0 text-fixed-white">
+                                                            Barina Silva</h6>
+                                                        <span class="fs-12 text-fixed-white">User since 2021</span>
+                                                    </div>
+                                                </div>
+                                                <span class="">The sleek design immediately caught my eye, and the
+                                                    functionality sealed the deal. It's not just eye candy; it
+                                                    performs
+                                                    exceptionally well -- <a href="javascript:void(0);"
+                                                        class="fw-semibold text-fixed-white op-6 fs-11"
+                                                       >Read
+                                                        More</a></span>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <div class="">
+                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
+                                                        <span class="text-warning d-block">
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="text-success fs-12">2 Days Ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card mb-0">
+                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
+                                            <div class="card-body">
+                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
+                                                    <img src="{{ asset('') }}assets/images/faces/3.jpg" alt="img"
+                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
+                                                    <div>
+                                                        <h6 class="mb-0 text-fixed-white">
+                                                            Luna Park</h6>
+                                                        <span class="fs-12 text-fixed-white">User since 2023</span>
+                                                    </div>
+                                                </div>
+                                                <span class="">The sleek design immediately caught my eye, and the
+                                                    functionality sealed the deal. It's not just eye candy; it
+                                                    performs
+                                                    exceptionally well -- <a href="javascript:void(0);"
+                                                        class="fw-semibold text-fixed-white op-6 fs-11"
+                                                       >Read
+                                                        More</a></span>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <div class="">
+                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
+                                                        <span class="text-warning d-block">
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="text-success fs-12">Today</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="card mb-0">
+                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
+                                            <div class="card-body">
+                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
+                                                    <img src="{{ asset('') }}assets/images/faces/4.jpg" alt="img"
+                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
+                                                    <div>
+                                                        <h6 class="mb-0 text-fixed-white">
+                                                            Donovan Frost</h6>
+                                                        <span class="fs-12 text-fixed-white">User since 2001</span>
+                                                    </div>
+                                                </div>
+                                                <span class="">The sleek design immediately caught my eye, and the
+                                                    functionality sealed the deal. It's not just eye candy; it
+                                                    performs
+                                                    exceptionally well -- <a href="javascript:void(0);"
+                                                        class="fw-semibold text-fixed-white op-6 fs-11"
+                                                       >Read
+                                                        More</a></span>
+                                                <div class="d-flex align-items-center justify-content-between mt-2">
+                                                    <div class="">
+                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
+                                                        <span class="text-warning d-block">
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                            <i class="ri-star-half-line"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="">
+                                                        <span class="text-success fs-12">12 Days Ago</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" id="contact">
+                <div class="container text-center">
+                    <span class="landing-text-heading">Contact Us</span>
+                    <h3 class="fw-semibold mt-3 mb-2">Have any questions? We’d be happy to hear from you.</h3>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-9">
+                            <p class="text-muted fs-15 mb-5 fw-normal">Feel free to contact us anytime with any questions or inquiries. Don’t hesitate to clear your doubts before trying our product.</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 bg-white">
+                        <div class="row text-start">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 pe-0">
+                                <div class="p-5 border-end">
+                                    <div class="row gy-3">
+                                        <div class="col-xl-6">
+                                            <div class="row gy-3">
+                                                <div class="col-xl-12">
+                                                    <label for="contact-address-name" class="form-label ">Full Name
+                                                        :</label>
+                                                    <input type="text" class="form-control"
+                                                        id="contact-address-name" placeholder="Enter Name">
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <label for="contact-address-phone" class="form-label ">Phone No
+                                                        :</label>
+                                                    <input type="text" class="form-control"
+                                                        id="contact-address-phone" placeholder="Enter Phone No">
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <label for="contact-address-address" class="form-label ">Address
+                                                        :</label>
+                                                    <textarea class="form-control" id="contact-address-address"
+                                                        rows="1"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6">
+                                            <label for="contact-address-message" class="form-label ">Message
+                                                :</label>
+                                            <textarea class="form-control" id="contact-address-message"
+                                                rows="8"></textarea>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="d-flex  mt-3">
+                                                <div class="">
+                                                    <div class="btn-list">
+                                                        <button class="btn btn-icon btn-info-light btn-wave">
+                                                            <i class="ri-facebook-line fw-bold"></i>
+                                                        </button>
+                                                        <button class="btn btn-icon btn-secondary-light btn-wave">
+                                                            <i class="ri-twitter-x-line fw-bold"></i>
+                                                        </button>
+                                                        <button class="btn btn-icon btn-success-light btn-wave">
+                                                            <i class="ri-instagram-line fw-bold"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="ms-auto">
+                                                    <button class="btn btn-primary  btn-wave">Send Message</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 pe-0">
+                                <div class="p-5 landing-contact-info">
+                                    <div class="">
+                                        <div class="fs-18 fw-semibold mb-3">Contact Information</div>
+                                        <div class="mb-3 text-default"> <i class="ri-map-pin-fill me-2 text-muted"></i> Jl. Gading Kirana Timur No. A-11/15 <span>(virtual office)</span></div>
+                                        <div class="d-flex mb-3"> <i
+                                                class="ri-phone-fill me-2 d-inline-block text-muted"></i>
+                                            <div class="text-default">
+                                                <div>+62 858 8881 8811</div> <span>+62 856 9116 8001</span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-4 text-default"><i class="ri-mail-fill me-2 d-inline-block text-muted"></i>
+                                            support@lintasinovasiglobal.com</div>
+                                    </div>
+                                    <div class="">
+                                        <div class="card custom-card border mb-0 shadow-none overflow-hidden"> <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15867.15331396479!2d106.89463882112943!3d-6.159097601248749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5acac1d4801%3A0x82a5c1c379a7cea6!2sHive%20Five%20Kelapa%20Gading!5e0!3m2!1sen!2skh!4v1733750379676!5m2!1sen!2skh"
+                                            height="100" style="border:0;width:100%" allowfullscreen=""
+                                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section landing-footer text-fixed-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12 mb-md-0 mb-3">
+                            <div class="px-4">
+                                <p class="fw-medium mb-3"><a href="{{ route('dashboard') }}"><img
+                                    src="{{ asset('') }}assets/images/brand-logos/logo-ligal.png" alt="" style="height: 75px"></a></p>
+                                <p class="mb-2 op-6 fw-normal">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit et magnam,
+                                    fuga est mollitia eius, quo illum illo inventore optio aut quas omnis rem. Dolores
+                                    accusantium aspernatur minus ea incidunt.
+                                </p>
+                                <p class="mb-0 op-6 fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                    Autem ea esse ad</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-12">
+                            <div class="px-4">
+                                <h6 class="fw-medium mb-3 text-fixed-white">PAGES</h6>
+                                <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="mail.html" class="text-fixed-white">Email</a>
+                                    </li>
+                                    <li>
+                                        <a href="profile.html" class="text-fixed-white">Profile</a>
+                                    </li>
+                                    <li>
+                                        <a href="timeline.html" class="text-fixed-white">Timeline</a>
+                                    </li>
+                                    <li>
+                                        <a href="projects-list.html" class="text-fixed-white">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Contacts</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 col-12">
+                            <div class="px-4">
+                                <h6 class="fw-medium text-fixed-white">INFO</h6>
+                                <ul class="list-unstyled op-6 fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="team.html" class="text-fixed-white">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Contact US</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="blog.html" class="text-fixed-white">Blog</a>
+                                    </li>
+                                    <li>
+                                        <a href="terms_conditions.html" class="text-fixed-white">Terms & Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-12">
+                            <div class="px-4">
+                                <h6 class="fw-medium text-fixed-white">CONTACT</h6>
+                                <ul class="list-unstyled fw-normal landing-footer-list">
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-home-4-line me-1 align-middle"></i> New York, NY 10012, US</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-mail-line me-1 align-middle"></i> info@fmail.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-phone-line me-1 align-middle"></i> +(555)-1920 1831</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="text-fixed-white op-6"><i
+                                                class="ri-printer-line me-1 align-middle"></i> +(123) 1293 123</a>
+                                    </li>
+                                    <li class="mt-3">
+                                        <p class="mb-2 fw-medium op-8">FOLLOW US ON :</p>
+                                        <div class="mb-0">
+                                            <div class="btn-list">
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-primary-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-facebook-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-secondary-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-twitter-x-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-success-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-instagram-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-info-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-github-line fw-bold"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-icon btn-warning-light btn-wave waves-effect waves-light">
+                                                    <i class="ri-youtube-line fw-bold"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="text-center landing-main-footer py-3">
+                <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
+                        class="text-primary fw-medium"><u>Zynix</u></a>.
+                    Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);"
+                        class="text-primary fw-medium"><u>
+                            Spruko</u>
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="scrollToTop">
+        <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>
+    </div>
+    <div id="responsive-overlay"></div>
+
+    <script src="{{ asset('assets/libs/@popperjs/core/umd/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/@simonwep/pickr/pickr.es5.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
+    <script src="{{ asset('assets/libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/defaultmenu.min.js') }}"></script>
+    <script src="{{ asset('assets/js/landing.js') }}"></script>
+    <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sticky.js') }}"></script>
+
+</body>
+
 </html>
