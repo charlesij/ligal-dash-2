@@ -178,30 +178,7 @@
                                         <a href="#expectations" class="side-menu__item">Expectations</a>
                                     </li>
                                     <li class="slide">
-                                        <a href="#features" class="side-menu__item">Features</a>
-                                    </li>
-                                    <li class="slide has-sub">
-                                        <a href="javascript:void(0);" class="side-menu__item">Level-2
-                                            <i class="fe fe-chevron-right side-menu__angle"></i></a>
-                                        <ul class="slide-menu child2">
-                                            <li class="slide">
-                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-1</a>
-                                            </li>
-                                            <li class="slide has-sub">
-                                                <a href="javascript:void(0);" class="side-menu__item">Level-2-2
-                                                    <i class="fe fe-chevron-right side-menu__angle"></i></a>
-                                                <ul class="slide-menu child3">
-                                                    <li class="slide">
-                                                        <a href="javascript:void(0);"
-                                                            class="side-menu__item">Level-2-2-1</a>
-                                                    </li>
-                                                    <li class="slide has-sub">
-                                                        <a href="javascript:void(0);"
-                                                            class="side-menu__item">Level-2-2-2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <a href="#features" class="side-menu__item">Tech-Stack</a>
                                     </li>
                                 </ul>
                             </li>
@@ -213,16 +190,6 @@
                             <li class="slide">
                                 <a href="#team" class="side-menu__item">
                                     <span class="side-menu__label">Team</span>
-                                </a>
-                            </li>
-                            <li class="slide">
-                                <a href="#faqs" class="side-menu__item">
-                                    <span class="side-menu__label">FAQ's</span>
-                                </a>
-                            </li>
-                            <li class="slide">
-                                <a href="#testimonials" class="side-menu__item">
-                                    <span class="side-menu__label">Testimonials</span>
                                 </a>
                             </li>
                             <li class="slide">
@@ -241,7 +208,7 @@
                                 <a href="{{ route('sign-up') }}" class="btn btn-wave btn-primary">
                                     Sign Up
                                 </a>
-                                <button class="btn btn-wave btn-icon btn-secondary switcher-icon d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas"
+                                <button class="btn btn-wave btn-icon btn-special switcher-icon d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas"
                                     data-bs-target="#switcher-canvas">
                                     <i class="ri-settings-3-line"></i>
                                 </button>
@@ -727,7 +694,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -747,7 +714,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -767,7 +734,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -787,7 +754,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -807,7 +774,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -827,7 +794,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -847,7 +814,7 @@
                                                 <div class="d-flex justify-content-center mt-3">
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-primary btn-wave waves-effect waves-light"><i class="ri-twitter-x-fill"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-secondary btn-wave ms-2 waves-effect waves-light"><i class="ri-facebook-fill"></i></a>
-                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-success btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
+                                                    <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-special btn-wave ms-2 waves-effect waves-light"><i class="ri-instagram-line"></i></a>
                                                     <a aria-label="anchor" href="javascript:void(0);" class="btn btn-icon btn-info btn-wave ms-2 waves-effect waves-light"><i class="ri-linkedin-fill"></i></a>
                                                 </div>
                                         </div>
@@ -890,26 +857,32 @@
                                     </div>
                                     <hr class="border-top my-4">
                                     <div>
-                                        <h2 class="mb-0 fw-semibold d-block">IDR 99.800/<span class="fs-12 fw-medium ms-1">Per Month</span></h2> <span class="text-muted fs-14"><span class="me-2 fw-semibold">+3/</span>Website Per month</span>
+                                        <h2 class="mb-0 fw-semibold d-block">IDR 99.800/<span class="fs-12 fw-medium ms-1">Per Month</span></h2> <span class="text-muted fs-14"><span class="me-2 fw-semibold">Billed Annually</span></span>
                                     </div>
                                     <div class="text-center my-3 pricing-barrier">
-                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Current Plan</span>
+                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Promo Plan</span>
                                     </div>
                                     <ul class="list-unstyled pricing-body">
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-secondary-transparent rounded-pill">Unlimited</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Shared Hosting </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Free Domain .com </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Free Design Revise </span> <span class="text-muted fs-12 fw-medium">3 Times</span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">7 Days</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> SEO Optimization </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">30 Days</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Email Support </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Free SSL </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Free Maintenance </span> </div>
                                         </li>
                                     </ul>
                                     <button type="button" class="btn btn-lg mt-4 btn-secondary-light d-grid w-100 btn-wave waves-effect waves-light">
@@ -937,26 +910,33 @@
                                     </div>
                                     <hr class="border-top my-4">
                                     <div>
-                                        <h2 class="mb-0 fw-semibold d-block ">IDR 499.800/<span class="fs-12  fw-medium ms-1">Per Month</span></h2> <span class="text-muted fs-14"><span class=" me-2 fw-semibold">+5/</span>Websites Per month</span>
+                                        <h2 class="mb-0 fw-semibold d-block ">IDR 499.800/<span class="fs-12  fw-medium ms-1">Per Month</span></h2> 
+                                        <span class="text-muted fs-14"><span class=" me-2 fw-semibold">Billed Annually</span></span>
                                     </div>
                                     <div class="text-center my-3 pricing-barrier">
                                         <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Reccomonded</span>
                                     </div>
                                     <ul class="list-unstyled pricing-body">
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-primary-transparent rounded-pill">New</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> All of Promo Plan benefits </span> <span class="badge bg-primary-transparent rounded-pill">Included</span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Dedicated Hosting </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Zero Downtime Website </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">15 Days</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Priority Technical Support </span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">45 Days</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Free Design Revise  </span> <span class="text-muted fs-12 fw-medium">5 Times</span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Google Analytics Traffic </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Admin Backoffice Panel </span> </div>
                                         </li>
                                     </ul>
                                     <button type="button" class="btn btn-lg mt-4 btn-primary d-grid w-100 btn-wave waves-effect waves-light">
@@ -968,8 +948,8 @@
                             <div class="card custom-card pricing-card pricing-card1 border shadow-xs">
                                 <div class="card-body p-4">
                                     <div class="d-flex gap-3 align-items-center p-1">
-                                        <div class="p-2 border d-inline-block border-success rounded border-opacity-10 bg-success-transparent">
-                                            <span class="avatar avatar-md bg-success svg-white">
+                                        <div class="p-2 border d-inline-block border-special rounded border-opacity-10 bg-special-transparent">
+                                            <span class="avatar avatar-md bg-special svg-white">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256">
                                                     <path d="M209,81l-33,31,32,88-24,24-48-72-24,24v24L88,224,72,184,32,168l24-24H80l24-24L32,72,56,48l88,32,31-33A24,24,0,0,1,209,81Z" opacity="0.2"></path>
                                                     <path d="M185.33,114.21l29.14-27.43.17-.16a32,32,0,0,0-45.26-45.26l-.16.17L141.79,70.67l-83-30.2a8,8,0,0,0-8.39,1.86l-24,24a8,8,0,0,0,1.22,12.31l63.89,42.59L76.69,136H56a8,8,0,0,0-5.65,2.34l-24,24A8,8,0,0,0,29,175.42l36.82,14.73,14.7,36.75.06.16a8,8,0,0,0,13.18,2.47l23.87-23.88A8,8,0,0,0,120,200V179.31l14.76-14.76,42.59,63.89a8,8,0,0,0,12.31,1.22l24-24a8,8,0,0,0,1.86-8.39Zm-.07,97.23-42.59-63.89A8,8,0,0,0,136.8,144a7.09,7.09,0,0,0-.79,0,8,8,0,0,0-5.66,2.34l-24,24A8,8,0,0,0,104,176v20.69L90.93,209.76,79.43,181A8,8,0,0,0,75,176.57l-28.74-11.5L59.32,152H80a8,8,0,0,0,5.66-2.34l24-24a8,8,0,0,0-1.22-12.32L44.56,70.74l13.5-13.49,83.22,30.26a8,8,0,0,0,8.56-2l30.94-32.88A16,16,0,0,1,203.4,75.22l-32.87,30.94a8,8,0,0,0-2,8.56l30.26,83.22Z">
@@ -983,14 +963,14 @@
                                     </div>
                                     <hr class="border-top my-4">
                                     <div>
-                                        <h2 class="mb-0 fw-semibold d-block ">Contact Us/<span class="fs-12  fw-medium ms-1">For More Requests</span></h2> <span class="text-muted fs-14"><span class=" me-2 fw-semibold"></span></span>
+                                        <h2 class="mb-0 fw-semibold d-block ">IDR ***/<span class="fs-12  fw-medium ms-1">By Requests</span></h2> <span class="text-muted fs-14"><span class=" me-2 fw-semibold"> Billed by Requested functionality </span></span>
                                     </div>
                                     <div class="text-center my-3 pricing-barrier">
-                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">New Plan</span>
+                                        <span class="op-6 fs-12 px-2 py-1 border rounded-pill">Special Plan</span>
                                     </div>
                                     <ul class="list-unstyled pricing-body">
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Timeless Assistance </span> <span class="badge bg-success-transparent rounded-pill">Newt</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> All Growth Plan Benefits </span> <span class="badge bg-special-transparent rounded-pill">Included</span> </div>
                                         </li>
                                         <li>
                                             <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Premium Experience </span> </div>
@@ -999,13 +979,19 @@
                                             <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Infinite Updates </span> </div>
                                         </li>
                                         <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Priority Technical Support </span> </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto"> Dedicated Virtual Servers </span> </div>
+                                        </li>
+                                        <li>
                                             <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Risk-Free Trial </span> <span class="text-muted fs-12 fw-medium">14 Days</span> </div>
                                         </li>
                                         <li>
-                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">60 Days</span> </div>
+                                            <div class="d-flex align-items-center"> <span class="avatar avatar-xs svg-primary"> <i class="ri-arrow-right-circle-line fs-14 text-success"></i> </span> <span class="ms-1 my-auto flex-fill"> Satisfaction Guarantee </span> <span class="text-muted fs-12 fw-medium">30 Days</span> </div>
                                         </li>
                                     </ul>
-                                    <button type="button" class="btn btn-lg btn-success-light mt-4 d-grid w-100 btn-wave waves-effect waves-light">
+                                    <button type="button" class="btn btn-lg btn-special-light mt-4 d-grid w-100 btn-wave waves-effect waves-light">
                                         <span class="ms-4 me-4">Schedule a Demo</span> </button>
                                 </div>
                             </div>
@@ -1014,7 +1000,7 @@
                 </div>
             </section>
             
-            <section class="section" id="faqs">
+            {{-- <section class="section" id="faqs">
                 <div class="container text-center">
                     <span class="landing-text-heading">F.A.Q 's</span>
                     <h3 class="fw-semibold mt-3 mb-2">Frequently asked questions ?</h3>
@@ -1546,9 +1532,9 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> --}}
             
-            <section class="section" id="contact">
+            <section class="section " id="contact">
                 <div class="container text-center">
                     <span class="landing-text-heading">Contact Us</span>
                     <h3 class="fw-semibold mt-3 mb-2">Have any questions? We’d be happy to hear from you.</h3>
@@ -1600,7 +1586,7 @@
                                                         <button class="btn btn-icon btn-secondary-light btn-wave">
                                                             <i class="ri-twitter-x-line fw-bold"></i>
                                                         </button>
-                                                        <button class="btn btn-icon btn-success-light btn-wave">
+                                                        <button class="btn btn-icon btn-special-light btn-wave">
                                                             <i class="ri-instagram-line fw-bold"></i>
                                                         </button>
                                                     </div>
@@ -1649,12 +1635,11 @@
                                 <p class="fw-medium mb-3"><a href="{{ route('dashboard') }}"><img
                                     src="{{ asset('') }}assets/images/brand-logos/logo-ligal.png" alt="" style="height: 75px"></a></p>
                                 <p class="mb-2 op-6 fw-normal">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit et magnam,
-                                    fuga est mollitia eius, quo illum illo inventore optio aut quas omnis rem. Dolores
-                                    accusantium aspernatur minus ea incidunt.
+                                    Lintas Inovasi Global, a registered startup specializing in IT services, including website development, dedicated to delivering innovative solutions.
                                 </p>
-                                <p class="mb-0 op-6 fw-normal">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Autem ea esse ad</p>
+                                <p class="mb-0 op-6 fw-normal">
+                                    Template by Zynix - Bootstrap
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6 col-12">
@@ -1713,19 +1698,19 @@
                                 <ul class="list-unstyled fw-normal landing-footer-list">
                                     <li>
                                         <a href="javascript:void(0);" class="text-fixed-white op-6"><i
-                                                class="ri-home-4-line me-1 align-middle"></i> New York, NY 10012, US</a>
+                                                class="ri-home-4-line me-1 align-middle"></i> Jl. Gading Kirana Timur No. A-11/15, Indonesia</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="text-fixed-white op-6"><i
-                                                class="ri-mail-line me-1 align-middle"></i> info@fmail.com</a>
+                                                class="ri-mail-line me-1 align-middle"></i> support@lintasinovasiglobal.com</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="text-fixed-white op-6"><i
-                                                class="ri-phone-line me-1 align-middle"></i> +(555)-1920 1831</a>
+                                                class="ri-phone-line me-1 align-middle"></i> +(62) 858 8881 8811</a>
                                     </li>
                                     <li>
                                         <a href="javascript:void(0);" class="text-fixed-white op-6"><i
-                                                class="ri-printer-line me-1 align-middle"></i> +(123) 1293 123</a>
+                                                class="ri-printer-line me-1 align-middle"></i> +(62) 856 9116 8001</a>
                                     </li>
                                     <li class="mt-3">
                                         <p class="mb-2 fw-medium op-8">FOLLOW US ON :</p>
@@ -1740,7 +1725,7 @@
                                                     <i class="ri-twitter-x-line fw-bold"></i>
                                                 </button>
                                                 <button
-                                                    class="btn btn-sm btn-icon btn-success-light btn-wave waves-effect waves-light">
+                                                    class="btn btn-sm btn-icon btn-special-light btn-wave waves-effect waves-light">
                                                     <i class="ri-instagram-line fw-bold"></i>
                                                 </button>
                                                 <button
@@ -1762,12 +1747,8 @@
             </section>
             
             <div class="text-center landing-main-footer py-3">
-                <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="javascript:void(0);"
-                        class="text-primary fw-medium"><u>Zynix</u></a>.
-                    Designed with <span class="fa fa-heart text-danger"></span> by <a href="javascript:void(0);"
-                        class="text-primary fw-medium"><u>
-                            Spruko</u>
-                    </a> All
+                <span class="text-muted fs-15"> Copyright © <span id="year"></span> <a href="https://lintasinovasiglobal.com"
+                        class="text-primary fw-medium"><u>Lintas Inovasi Global</u></a> All
                     rights
                     reserved
                 </span>

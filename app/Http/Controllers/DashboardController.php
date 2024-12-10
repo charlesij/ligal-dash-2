@@ -10,4 +10,8 @@ class DashboardController extends Controller
     {
         return 'ini halaman dashboard index';
     }
+    public function signUp()
+    {
+        return view('signup');
+    }
 }
