@@ -222,7 +222,7 @@
               </div>
               @endif
             </li>
-            <li><a class="dropdown-item d-flex align-items-center" href="profile.html"><i
+            <li><a class="dropdown-item d-flex align-items-center" href="{{ route('profile') }}"><i
                         class="ti ti-user text-primary me-2 fs-16"></i>Profile</a>
             </li>
             <li><a class="dropdown-item d-flex align-items-center" href="mail.html"> <i

@@ -1,0 +1,8 @@
+Buat satu halaman portfolio
+Buat Aplikasi demo beserta fitur fitur unggulan yang kita bisa 
+1. Product (CRUD Ecommerce, User, User Access Management)
+2. Analytics (Internal Analytic, Firebase)
+3. Real-time preview (Websocket)
+4. Fast & Efficient Query (Redis)
+5. REST API (Full API Crud)
+6. Application Documentation (Swagger)

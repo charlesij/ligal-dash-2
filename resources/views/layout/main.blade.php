@@ -9,45 +9,21 @@
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
     <meta name="Author" content="Wcsrm Software Private Limited">
     <meta name="keywords" content="lintas inovasi global, bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
-    <!-- Favicon -->
     <link rel="icon" href="{{ asset('/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
-    
-    <!-- Choices JS -->
     <script src="{{ asset('/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
-
-    <!-- Main Theme Js -->
     <script src="{{ asset('/assets/js/main.js') }}"></script>
-    
-    <!-- Bootstrap Css -->
     <link id="style" href="{{ asset('/assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" >
-
-    <!-- Style Css -->
     <link href="{{ asset('/assets/css/styles.css') }}" rel="stylesheet" >
-
-    <!-- Icons Css -->
     <link href="{{ asset('/assets/css/icons.css') }}" rel="stylesheet" >
-
-    <!-- Node Waves Css -->
     <link href="{{ asset('/assets/libs/node-waves/waves.min.css') }}" rel="stylesheet" > 
-
-    <!-- Simplebar Css -->
     <link href="{{ asset('/assets/libs/simplebar/simplebar.min.css') }}" rel="stylesheet" >
-
-    <!-- Swiper Css -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/swiper/swiper-bundle.min.css') }}">
-    
-    <!-- Color Picker Css -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
-
-    <!-- Choices Css -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
-
-    <!-- FlatPickr CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/flatpickr/flatpickr.min.css') }}">
-
-    <!-- Auto Complete CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/@tarekraafat/autocomplete.js/css/autoComplete.css') }}">
   </head>
 
@@ -531,10 +507,10 @@
     <!-- Loader -->
 
     <div class="page">
-      @include('dashboard.partials.navbar')
-      @include('dashboard.partials.sidebar')
+      @include('partials.navbar')
+      @include('partials.sidebar')
       @yield('container')
-      @include('dashboard.partials.footer')
+      @include('partials.footer')
         <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">

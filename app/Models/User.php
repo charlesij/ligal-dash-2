@@ -16,6 +16,7 @@ class User extends Authenticatable
         'password',
         'profile',
         'age',
+        'gender',
         'birthday',
         'phone',
         'experience',
@@ -35,5 +36,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function product()
+    {
+        return $this->hasMany(Product::class, 'user_id', 'id');
     }
 }

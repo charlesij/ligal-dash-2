@@ -1,4 +1,4 @@
-@extends('dashboard.layout.main')
+@extends('layout.main')
 @section('container')
 
 	<div class="main-content app-content">
@@ -18,12 +18,6 @@
 				</div>
         @endif
 				<div class="d-flex align-items-center gap-2 flex-wrap">
-					<div class="form-group">
-						<div class="input-group border">
-							<div class="input-group-text bg-white border-0 pe-0"> <i class="ri-calendar-line lh-1"></i> </div>
-							<input type="text" class="form-control breadcrumb-input border-0 bg-white" id="daterange" placeholder="Search By Date Range">
-						</div>
-					</div>
 					<button type="button" class="btn btn-primary btn-wave"> 
 						<i class="ri-upload-2-line me-2"></i> Export report
 					</button> 
@@ -108,7 +102,7 @@
 															<div class="d-flex align-items-start justify-content-between mb-3 flex-wrap">
 																	<div>
 																			<span class="d-block mb-3 fw-medium">Profit By Sale</span>
-																			<h3 class="fw-semibold lh-1 mb-0">$645</h3>
+																			<h3 class="fw-semibold lh-1 mb-0">$2,050</h3>
 																	</div>
 																	<div class="text-end">
 																			<div class="mb-4">
