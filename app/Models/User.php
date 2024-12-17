@@ -12,19 +12,9 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
     protected $fillable = [
         'name',
+        'uid',
         'email',
         'password',
-        'profile',
-        'age',
-        'gender',
-        'birthday',
-        'phone',
-        'experience',
-        'personal_bio',
-        'skills',
-        'user_job',
-        'user_access',
-        'user_preferences',
     ];
     protected $hidden = [
         'password',
@@ -40,5 +30,9 @@ class User extends Authenticatable
     public function product()
     {
         return $this->hasMany(Product::class, 'user_id', 'id');
+    }
+    public function userDetails()
+    {
+        return $this->hasOne(UserDetails::class, 'user_id', 'id');
     }
 }

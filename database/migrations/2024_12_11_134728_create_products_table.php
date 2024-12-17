@@ -22,7 +22,7 @@ return new class extends Migration
             $table->decimal('fixed_price');
             $table->decimal('discount')->default(0);
             $table->string('discount_type');
-            $table->string('availability')->default('In Stock');
+            $table->string('availability')->nullable();
             $table->timestamps();
         
             $table->foreign('user_id')

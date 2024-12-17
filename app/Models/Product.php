@@ -19,7 +19,7 @@ class Product extends Model
         'fixed_price',
         'discount',
         'discount_type',
-        'is_ready',
+        'availability',
     ];
     protected $table = 'products';
 
@@ -50,5 +50,9 @@ class Product extends Model
     public function productCategory()
     {
         return $this->hasMany(ProductCategory::class, 'product_id', 'id');
+    }
+    public function categories()
+    {
+        return $this->belongsToMany(Categories::class, 'product_categories', 'product_id', 'category_id');
     }
 }

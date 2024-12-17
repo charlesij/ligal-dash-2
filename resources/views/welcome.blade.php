@@ -172,10 +172,10 @@
                                 </a>
                                 <ul class="slide-menu child1">
                                     <li class="slide">
-                                        <a href="#services" class="side-menu__item">Services</a>
+                                        <a href="#expectations" class="side-menu__item">Expectations</a>
                                     </li>
                                     <li class="slide">
-                                        <a href="#expectations" class="side-menu__item">Expectations</a>
+                                        <a href="#services" class="side-menu__item">Services</a>
                                     </li>
                                     <li class="slide">
                                         <a href="#features" class="side-menu__item">Tech-Stack</a>
@@ -183,13 +183,13 @@
                                 </ul>
                             </li>
                             <li class="slide">
-                                <a href="#pricing" class="side-menu__item">
-                                    <span class="side-menu__label">Pricing</span>
+                                <a href="#team" class="side-menu__item">
+                                    <span class="side-menu__label">Team</span>
                                 </a>
                             </li>
                             <li class="slide">
-                                <a href="#team" class="side-menu__item">
-                                    <span class="side-menu__label">Team</span>
+                                <a href="#pricing" class="side-menu__item">
+                                    <span class="side-menu__label">Pricing</span>
                                 </a>
                             </li>
                             <li class="slide">
@@ -205,6 +205,9 @@
                             </svg></div>
                         <div class="d-lg-flex d-none">
                             <div class="btn-list d-lg-flex d-none mt-lg-2 mt-xl-0 mt-0">
+                                <a href="{{ route('sign-in') }}" class="btn btn-wave btn-secondary">
+                                    Sign In
+                                </a>
                                 <a href="{{ route('sign-up') }}" class="btn btn-wave btn-primary">
                                     Sign Up
                                 </a>

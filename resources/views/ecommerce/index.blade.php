@@ -14,7 +14,12 @@
                     <li class="breadcrumb-item active" aria-current="page">Main Menu</li>
                 </ol>
                 </div>
-                <div>
+                <div class="btn-list">
+                    <a href="{{ route('products') }}">
+                        <button class="btn btn-primary-light btn-wave me-0 waves-effect waves-light">
+                            <i class="ri-box-3-line align-middle"></i> View Products
+                        </button>
+                    </a>
                 <button class="btn btn-secondary-light btn-wave me-0 waves-effect waves-light">
                     <i class="ri-upload-cloud-line align-middle"></i> Export Report
                 </button>

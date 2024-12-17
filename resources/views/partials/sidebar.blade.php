@@ -56,6 +56,64 @@
                 </li>
             </ul>
         </li>
+        <li class="slide has-sub {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'open' : '' }}">
+            <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'active' : '' }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round  stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user side-menu__icon">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+              </svg>
+              <span class="side-menu__label">User</span>
+              <i class="ri-arrow-right-s-line side-menu__angle"></i>
+            </a>
+            <ul class="slide-menu child1" style="{{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'display:block' : '' }}">
+                <li class="slide side-menu__label1">
+                    <a href="javascript:void(0)">User</a>
+                </li>
+                <li class="slide">
+                    <a href="{{ route('profile') }}" class="side-menu__item {{ request()->routeIs('profile') ? 'active' : '' }}">Profile</a>
+                </li>
+                <li class="slide">
+                  <a href="{{ route('mail') }}" class="side-menu__item {{ request()->routeIs('mail') ? 'active' : '' }}">Mail</a>
+                </li>
+                <li class="slide">
+                    <a href="{{ route('task-manager') }}" class="side-menu__item {{ request()->routeIs('task-manager') ? 'active' : '' }}">Task Manager</a>
+                </li>
+                <li class="slide">
+                    <a href="{{ route('user-settings') }}" class="side-menu__item {{ request()->routeIs('user-settings') ? 'active' : '' }}">Settings</a>
+                </li>
+                <li class="slide">
+                    <a href="{{ route('user-support') }}" class="side-menu__item {{ request()->routeIs('user-support') ? 'active' : '' }}">Support</a>
+                </li>
+            </ul>
+        </li>
+        <li class="slide has-sub {{ request()->routeIs(RouteHelper::getOfficeRouteLists()) ? 'open' : '' }}">
+            <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(RouteHelper::getOfficeRouteLists()) ? 'active' : '' }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building side-menu__icon">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M3 21l18 0" />
+                <path d="M9 8l1 0" />
+                <path d="M9 12l1 0" />
+                <path d="M9 16l1 0" />
+                <path d="M14 8l1 0" />
+                <path d="M14 12l1 0" />
+                <path d="M14 16l1 0" />
+                <path d="M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16" />
+              </svg>
+              <span class="side-menu__label">Office</span>
+              <i class="ri-arrow-right-s-line side-menu__angle"></i>
+            </a>
+            <ul class="slide-menu child1" style="{{ request()->routeIs(RouteHelper::getOfficeRouteLists()) ? 'display:block' : '' }}">
+                <li class="slide side-menu__label1">
+                    <a href="javascript:void(0)">Office</a>
+                </li>
+                <li class="slide">
+                    <a href="{{ route('employee') }}" class="side-menu__item {{ request()->routeIs('employee') ? 'active' : '' }}">Employee</a>
+                    {{-- <a href="{{ route('profile') }}" class="side-menu__item {{ request()->routeIs('profile') ? 'active' : '' }}">Employee</a> --}}
+                </li>
+
+            </ul>
+        </li>
         <!-- End::slide -->
         {{-- batas --}}
         

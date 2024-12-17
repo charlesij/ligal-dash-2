@@ -2,12 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Carbon\Carbon;
 use App\Models\Visitor;
+use App\Models\Categories;
 use App\Models\RandomQuote;
 use Illuminate\Database\Seeder;
-use Carbon\Carbon;
 
 class DatabaseSeeder extends Seeder
 {
@@ -39,6 +38,46 @@ class DatabaseSeeder extends Seeder
         Visitor::create([
             'total_visitor' => 0,
             'day' => Carbon::now(),
-        ]);        
+        ]);   
+        
+        $categories = [
+            'Automotive',
+            'Household',
+            'Electronics',
+            'Books',
+            'Kitchen',
+            'Kids & Baby Fashion',
+            'Muslim Fashion',
+            "Men's Fashion",
+            "Women's Fashion",
+            'Movies & Music',
+            'Gaming',
+            'Mobile Phones & Tablets',
+            'Mother & Baby',
+            'Beauty',
+            'Health',
+            'Computers & Laptops',
+            'Toys & Hobbies',
+            'Foods & Beverages',
+            'Office & Stationery',
+            'Sports',
+            'Pet Care',
+            'Body Care',
+            'Body Accesories',
+            'Party Supplies',
+            'Hardware',
+            'Property',
+            'Tickets, Travel, Vouchers',
+            'Others',
+        ];
+
+        foreach ($categories as $category) {
+            Categories::create([
+                'category_name' => $category
+            ]);
+        }
+
+        $this->call(UserSeeder::class);
+        $this->call(ProductSeeder::class);
     }
 }
