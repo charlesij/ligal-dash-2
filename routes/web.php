@@ -1,21 +1,27 @@
 <?php
 
-use App\Http\Controllers\OfficeController;
+use App\Models\SubscriptionInfo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EcommerceController;
+use App\Http\Controllers\MailSupportController;
+use App\Http\Controllers\SubscriptionInfoController;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/sign-up', [DashboardController::class, 'signUp'])->name('sign-up');
-Route::get('/sign-in', [DashboardController::class, 'signIn'])->name('sign-in');
-Route::post('/sign-in', [DashboardController::class, 'loginAttempt'])->name('post-login');
-Route::post('/firebase-login', [DashboardController::class, 'firebaseLogin']);
+Route::post('/support-email', [MailSupportController::class, 'store'])->name('send-mail-support');
+
+Route::get('/sign-up', [DashboardController::class, 'signUp'])->name('sign-up')->middleware('guest');
+Route::get('/sign-in', [DashboardController::class, 'signIn'])->name('sign-in')->middleware('guest');
+Route::post('/sign-in', [DashboardController::class, 'loginAttempt'])->name('post-login')->middleware('guest');
+Route::post('/firebase-login', [DashboardController::class, 'firebaseLogin'])->middleware('guest');
+Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
 Route::get('/reset-password', [DashboardController::class, 'resetPassword'])->name('reset-password');
 
 // Contoh tanpa middleware auth 
@@ -48,3 +54,9 @@ Route::get('/wishlist', [ProductController::class, 'wishlist'])->name('wishlist'
 // Office 
 Route::get('/employee', [OfficeController::class, 'employee'])->name('employee');
 Route::get('/cek_ip', [ProductController::class, 'cekIp']);
+
+// Coming Soon
+Route::get('/coming-soon', [SubscriptionInfoController::class, 'comingSoon'])->name('coming-soon');
+Route::post('/storesubsemails', [SubscriptionInfoController::class, 'storeEmails'])->name('subscription-emails');
+Route::get('/patch-timeline', [DashboardController::class, 'timeline'])->name('timeline');
+

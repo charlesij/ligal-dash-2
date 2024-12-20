@@ -42,7 +42,8 @@
                           <div
                               class="mt-4 mb-0 p-4 d-flex align-items-center flex-wrap gap-3 justify-content-between">
                               <div>
-                                  <h5 class="fw-semibold mb-3">{{ $userData->name }}</h5>
+                                
+                                  <h5 class="fw-semibold mb-3">{{ (auth()->user() !== null) ? $userData->name : 'Guest' }}</h5>
                                   <span class="d-block fw-medium text-muted mb-1">{{ $userDetails->profession }}</span>
                                   <p class="fs-12 mb-0 fw-medium text-muted"> <span class="me-3">
                                     <i class="ri-building-line me-1 align-middle"></i>{{ $userDetails->city }}</span>
@@ -162,7 +163,7 @@
                           <ul class="list-group list-group-flush">
                               <li class="list-group-item">
                                   <div><span class="fw-medium me-2">Name :</span><span
-                                          class="text-muted">{{ $userData->name }}</span></div>
+                                          class="text-muted">{{ (auth()->user() !== null) ? $userData->name : 'Visitor' }}</span></div>
                               </li>
                               <li class="list-group-item">
                                   <div><span class="fw-medium me-2">Email :</span><span

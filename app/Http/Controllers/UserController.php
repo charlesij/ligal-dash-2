@@ -18,6 +18,7 @@ class UserController extends Controller
             return redirect(route('dashboard'));
         }
         $user = User::with('userDetails')->where('id', $userId)->first();
+        
         return view('dashboard.profile', [
             'userData' => $user,
             'userDetails' => $user->userDetails,

@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('activity');
             $table->string('last_login');
             $table->timestamps();
+
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 

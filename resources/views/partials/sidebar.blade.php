@@ -114,8 +114,57 @@
 
             </ul>
         </li>
-        <!-- End::slide -->
-        {{-- batas --}}
+
+        <li class="slide__category">
+          <span class="category-name">Update</span>
+        </li>
+
+        <li class="slide">
+          <a href="{{ route('timeline') }}" class="side-menu__item {{ request()->routeIs('timeline') ? 'active' : '' }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-timeline side-menu__icon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M4 16l6 -7l5 5l5 -6" />
+              <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            </svg>
+            <span class="side-menu__label">Timeline</span>
+          </a>
+        </li>
+
+        <li class="slide has-sub {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'open' : '' }}">
+          <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'active' : '' }}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-progress side-menu__icon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M10 20.777a8.942 8.942 0 0 1 -2.48 -.969" />
+              <path d="M14 3.223a9.003 9.003 0 0 1 0 17.554" />
+              <path d="M4.579 17.093a8.961 8.961 0 0 1 -1.227 -2.592" />
+              <path d="M3.124 10.5c.16 -.95 .468 -1.85 .9 -2.675l.169 -.305" />
+              <path d="M6.907 4.579a8.954 8.954 0 0 1 3.093 -1.356" />
+            </svg>
+            <span class="side-menu__label">Updates</span>
+            <i class="ri-arrow-right-s-line side-menu__angle"></i>
+          </a>
+          <ul class="slide-menu child1" style="{{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'display:block' : '' }}">
+              <li class="slide side-menu__label1">
+                  <a href="javascript:void(0)">Updates</a>
+              </li>
+              <li class="slide">
+                  <a href="{{ route('coming-soon') }}" class="side-menu__item {{ request()->routeIs('coming-soon') ? 'active' : '' }}">Websocket Chat</a>
+              </li>
+              <li class="slide">
+                <a href="{{ route('coming-soon') }}" class="side-menu__item {{ request()->routeIs('coming-soon') ? 'active' : '' }}">To Do Lists</a>
+              </li>
+              <li class="slide">
+                  <a href="{{ route('coming-soon') }}" class="side-menu__item {{ request()->routeIs('coming-soon') ? 'active' : '' }}">Purchasing Features</a>
+              </li>
+              <li class="slide">
+                  <a href="{{ route('coming-soon') }}" class="side-menu__item {{ request()->routeIs('coming-soon') ? 'active' : '' }}">Portfolio Showcase</a>
+              </li>
+          </ul>
+        </li>
+
         
       </ul>
       <div class="slide-right" id="slide-right">

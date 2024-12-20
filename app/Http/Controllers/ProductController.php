@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function products()
     {
-        $data = Product::with('productPhoto')->paginate(8);
+        $data = Product::with('productPhoto')->inRandomOrder()->paginate(8);
         $categories = Categories::all();
         return view('ecommerce.product.index', [
             'products' => $data,

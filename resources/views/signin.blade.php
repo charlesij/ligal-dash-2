@@ -2,85 +2,94 @@
 <html lang="en" dir="ltr" data-nav-layout="vertical" data-vertical-style="overlay" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
 
 <head>
-
-    <!-- Meta Data -->
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Lintas Inovasi Global | Sign In </title>
-    <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
-    <meta name="Author" content="Wcsrm Software Private Limited">
+    <meta name="Author" content="Lintas Inovasi Global">
+    <meta name="Description" content="Lintas Inovasi Global is a technology company providing IT services, including website, mobile, and desktop application development. We cater to startups and large corporations, offering innovative solutions such as modern website upgrades, data management, and customizable templates with efficient dashboards. With a dedicated team of top-tier experts, we focus on delivering high-quality services tailored to customer needs and keeping up with the latest digital standards.">
+    <meta name="keywords" content="lintas inovasi global, bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
 
     <link rel="icon" href="{{ asset('assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
-
     <script src="{{ asset('assets/js/authentication-main.js') }}"></script>
-
     <link id="style" href="{{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" >
-
     <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet" >
-
-    <link href="{{ asset('') }}assets/css/icons.css" rel="stylesheet" >
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="module">
-      // Firebase CDN Import
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-      import { getAuth, GoogleAuthProvider, signInWithPopup, connectAuthEmulator } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-  
-      // Konfigurasi Firebase
-      const firebaseConfig = {
-          apiKey: "fake-api-key",
-          authDomain: "fake-auth-domain",
-          projectId: "your-project-id"
-      };
-  
-      // Inisialisasi Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth(app);
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup, connectAuthEmulator } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
-      connectAuthEmulator(auth, "http://127.0.0.1:9099");
-  
-      const provider = new GoogleAuthProvider();
-  
-      document.addEventListener('DOMContentLoaded', () => {
-          const googleLoginBtn = document.getElementById('google-login');
-  
-          if (googleLoginBtn) {
-              googleLoginBtn.addEventListener('click', async () => {
-                  try {
-                      // Popup login Google
-                      const result = await signInWithPopup(auth, provider);
-                      const user = result.user;
-  
-                      console.log("Login Berhasil: ", user);
-  
-                      // Kirim data user ke Laravel
-                      const response = await fetch('/firebase-login', {
-                          method: 'POST',
-                          headers: {
-                              'Content-Type': 'application/json',
-                              'X-CSRF-TOKEN': '{{ csrf_token() }}'
-                          },
-                          body: JSON.stringify({
-                              uid: user.uid,
-                              name: user.displayName,
-                              email: user.email,
-                          })
-                      });
-  
-                      const responseData = await response.json();
-                      console.log("Respon dari Laravel:", responseData);
-  
-                      alert(`Login berhasil! Selamat datang, ${user.displayName}`);
-                  } catch (error) {
-                      console.error("Error saat login:", error.message);
-                      alert("Login gagal, silakan coba lagi.");
-                  }
-              });
-          } else {
-              console.error("Element dengan ID 'google-login' tidak ditemukan.");
-          }
-      });
+    const firebaseConfig = {
+        apiKey: "fake-api-key",
+        authDomain: "fake-auth-domain",
+        projectId: "your-project-id"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    connectAuthEmulator(auth, "http://127.0.0.1:9099");
+
+    const provider = new GoogleAuthProvider();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const googleLoginBtn = document.getElementById('google-login');
+
+        if (googleLoginBtn) {
+            googleLoginBtn.addEventListener('click', async () => {
+                try {
+                    const result = await signInWithPopup(auth, provider);
+                    const user = result.user;
+
+                    console.log("Login Berhasil: ", user);
+
+                    const response = await fetch('/firebase-login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: JSON.stringify({
+                            uid: user.uid,
+                            name: user.displayName,
+                            email: user.email,
+                        })
+                    });
+
+                    const responseData = await response.json();
+
+                    if (responseData.status === 'success') {
+                        // console.log(responseData);
+                        // Swal.fire({
+                        //     position: 'top-end',
+                        //     icon: 'success',
+                        //     title: responseData.message || 'Login Success',
+                        //     showConfirmButton: false,
+                        //     timer: 3000
+                        // });
+                        location.reload(); 
+                    } else {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: responseData.message || 'Login failed, you may report this to our team.',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+                    }
+                } catch (error) {
+                    console.error("Error saat login:", error.message);
+                    alert("Login gagal, silakan coba lagi.");
+                }
+            });
+        } else {
+            console.error("Element dengan ID 'google-login' tidak ditemukan.");
+        }
+    });
     </script>
+
 </head>
 
 <body class="authentication-background authenticationcover-background position-relative" id="particles-js">
@@ -129,12 +138,12 @@
                                 <button type="button" class="btn btn-secondary btn-md btn-icon" id="google-login"> 
                                   <i class="ti ti-brand-google fs-18"></i> 
                                 </button> 
-                                {{-- <button type="button" class="btn btn-special btn-md btn-icon" id="github-login"> 
+                                <button type="button" class="btn btn-special btn-md btn-icon" id="github-login"> 
                                   <i class="ti ti-brand-github fs-18"></i>
                                 </button> 
                                 <button type="button" class="btn btn-primary btn-md btn-icon" id="facebook-login"> 
                                   <i class="ti ti-brand-facebook fs-18"></i>
-                                </button>  --}}
+                                </button> 
                             </div>
                             <div class="d-grid mt-4">
                                 <button type="submit" class="btn btn-primary">Sign In</button>

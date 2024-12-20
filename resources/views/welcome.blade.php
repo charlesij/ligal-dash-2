@@ -6,8 +6,9 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title> Lintas Inovasi Global | Dashboard </title>
-    <meta name="Description" content="Lintas Inovasi Global ">
     <meta name="Author" content="Lintas Inovasi Global">
+    <meta name="Description" content="Lintas Inovasi Global is a technology company providing IT services, including website, mobile, and desktop application development. We cater to startups and large corporations, offering innovative solutions such as modern website upgrades, data management, and customizable templates with efficient dashboards. With a dedicated team of top-tier experts, we focus on delivering high-quality services tailored to customer needs and keeping up with the latest digital standards.">
+    <meta name="keywords" content="lintas inovasi global, bootstrap template, admin panel bootstrap, bootstrap dashboard, admin, admin dashboard template, dashboard template, html css templates, dashboard, template dashboard,  bootstrap dashboard template, dashboard html css, bootstrap admin dashboard,  bootstrap admin, dashboard template, bootstrap5 admin template">
 
     <link rel="icon" href="{{ asset('assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
     <link id="style" href="{{ asset('assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -18,7 +19,8 @@
     <link rel="stylesheet" href="{{ asset('assets/libs/flatpickr/flatpickr.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/libs/choices.js/public/assets/styles/choices.min.css') }}">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         if (localStorage.ligalandingdarktheme) {
             document.querySelector("html").setAttribute("data-theme-mode", "dark")
@@ -1003,540 +1005,6 @@
                 </div>
             </section>
             
-            {{-- <section class="section" id="faqs">
-                <div class="container text-center">
-                    <span class="landing-text-heading">F.A.Q 's</span>
-                    <h3 class="fw-semibold mt-3 mb-2">Frequently asked questions ?</h3>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-7">
-                            <p class="text-muted fs-15 mb-5 fw-normal">We have shared some of the most frequently asked
-                                questions to help you out.</p>
-                        </div>
-                    </div>
-                    <div class="row text-start">
-                        <div class="col-xl-12">
-                            <div class="row gy-2">
-                                <div class="col-xl-6">
-                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
-                                        id="accordionFAQ1">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1One">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon1One" aria-expanded="true"
-                                                    aria-controls="collapsecustomicon1One">
-                                                    Where can I sign up for your newsletter?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1One" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingcustomicon1One" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Two">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Two"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon1Two">
-                                                    Where can in edit my address?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Two" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Two" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Three">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Three"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon1Three">
-                                                    What are your opening hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Three" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Three"
-                                                data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Four">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Four"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon1Four">
-                                                    Do I have the right to return an item?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Four" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Four"
-                                                data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Five">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Five"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon1Five">
-                                                    General Terms & Conditions (GTC)
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Five" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Five"
-                                                data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon1Six">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon1Six"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon1Six">
-                                                    Do I need to create an account to make an order?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon1Six" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon1Six" data-bs-parent="#accordionFAQ1">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-6">
-                                    <div class="accordion accordion-customicon1 accordion-primary accordions-items-seperate"
-                                        id="accordionFAQ2">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Five">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Five"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon2Five">
-                                                    General Terms & Conditions (GTC)
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Five" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Five"
-                                                data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Six">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Six"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon2Six">
-                                                    Do I need to create an account to make an order?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Six" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Six" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2One">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2One"
-                                                    aria-expanded="true" aria-controls="collapsecustomicon2One">
-                                                    Where can I subscribe to your newsletter?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2One" class="accordion-collapse collapse "
-                                                aria-labelledby="headingcustomicon2One" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Two">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Two"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon2Two">
-                                                    Where can in edit my address?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Two" data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Three">
-                                                <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Three"
-                                                    aria-expanded="false" aria-controls="collapsecustomicon2Three">
-                                                    What are your opening hours?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
-                                                aria-labelledby="headingcustomicon2Three"
-                                                data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingcustomicon2Four">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsecustomicon2Four" aria-expanded="false"
-                                                    aria-controls="collapsecustomicon2Four">
-                                                    Do I have the right to return an item?
-                                                </button>
-                                            </h2>
-                                            <div id="collapsecustomicon2Four" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingcustomicon2Four"
-                                                data-bs-parent="#accordionFAQ2">
-                                                <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is
-                                                    shown by
-                                                    default, until the collapse plugin adds the appropriate classes that
-                                                    we
-                                                    use to style each element. These classes control the overall
-                                                    appearance,
-                                                    as well as the showing and hiding via CSS transitions. You can
-                                                    modify
-                                                    any of this with custom CSS or overriding our default variables.
-                                                    It's
-                                                    also worth noting that just about any HTML can go within the
-                                                    <code>.accordion-body</code>, though the transition does limit
-                                                    overflow.
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section landing-Features" id="testimonials">
-                <div class="container reviews-container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-10">
-                            <div class="text-center mb-0 mt-4 heading-section">
-                                <span class="landing-text-heading dark-text">Testimonals</span>
-                                <div class="h3 mt-3 text-fixed-white">See What People Are Saying About Us</div>
-                                <div class="fs-15 text-fixed-white mb-4 op-8">Customer satisfaction and experience are our top priorities.</div>
-                            </div>
-                        </div>
-                        <div class="col-xl-10">
-                            <div class="swiper pagination-dynamic testimonialSwiperService">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="card mb-0">
-                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
-                                            <div class="card-body">
-                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
-                                                    <img src="{{ asset('') }}assets/images/faces/1.jpg" alt="img"
-                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
-                                                    <div>
-                                                        <h6 class="mb-0 text-fixed-white">
-                                                            Autumn Quinn</h6>
-                                                        <span class="fs-12 text-fixed-white">User since 2023</span>
-                                                    </div>
-                                                </div>
-                                                <span class="">The sleek design immediately caught my eye, and the
-                                                    functionality sealed the deal. It's not just eye candy; it
-                                                    performs
-                                                    exceptionally well -- <a href="javascript:void(0);"
-                                                        class="fw-semibold text-fixed-white op-6 fs-11"
-                                                       >Read
-                                                        More</a></span>
-                                                <div class="d-flex align-items-center justify-content-between mt-2">
-                                                    <div class="">
-                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
-                                                        <span class="text-warning d-block">
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="">
-                                                        <span class="text-success fs-12">9 Days Ago</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card mb-0">
-                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
-                                            <div class="card-body">
-                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
-                                                    <img src="{{ asset('') }}assets/images/faces/2.jpg" alt="img"
-                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
-                                                    <div>
-                                                        <h6 class="mb-0 text-fixed-white">
-                                                            Barina Silva</h6>
-                                                        <span class="fs-12 text-fixed-white">User since 2021</span>
-                                                    </div>
-                                                </div>
-                                                <span class="">The sleek design immediately caught my eye, and the
-                                                    functionality sealed the deal. It's not just eye candy; it
-                                                    performs
-                                                    exceptionally well -- <a href="javascript:void(0);"
-                                                        class="fw-semibold text-fixed-white op-6 fs-11"
-                                                       >Read
-                                                        More</a></span>
-                                                <div class="d-flex align-items-center justify-content-between mt-2">
-                                                    <div class="">
-                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
-                                                        <span class="text-warning d-block">
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="">
-                                                        <span class="text-success fs-12">2 Days Ago</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card mb-0">
-                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
-                                            <div class="card-body">
-                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
-                                                    <img src="{{ asset('') }}assets/images/faces/3.jpg" alt="img"
-                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
-                                                    <div>
-                                                        <h6 class="mb-0 text-fixed-white">
-                                                            Luna Park</h6>
-                                                        <span class="fs-12 text-fixed-white">User since 2023</span>
-                                                    </div>
-                                                </div>
-                                                <span class="">The sleek design immediately caught my eye, and the
-                                                    functionality sealed the deal. It's not just eye candy; it
-                                                    performs
-                                                    exceptionally well -- <a href="javascript:void(0);"
-                                                        class="fw-semibold text-fixed-white op-6 fs-11"
-                                                       >Read
-                                                        More</a></span>
-                                                <div class="d-flex align-items-center justify-content-between mt-2">
-                                                    <div class="">
-                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
-                                                        <span class="text-warning d-block">
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="">
-                                                        <span class="text-success fs-12">Today</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card mb-0">
-                                            <i class="bx bxs-quote-alt-left review-quote review-quote1 primary"></i>
-                                            <div class="card-body">
-                                                <div class="d-flex  gap-3 p-2 mb-3 rounded bg-white-transparent align-items-center">
-                                                    <img src="{{ asset('') }}assets/images/faces/4.jpg" alt="img"
-                                                        class="text-center avatar avatar-md rounded-circle mb-2 mb-sm-0">
-                                                    <div>
-                                                        <h6 class="mb-0 text-fixed-white">
-                                                            Donovan Frost</h6>
-                                                        <span class="fs-12 text-fixed-white">User since 2001</span>
-                                                    </div>
-                                                </div>
-                                                <span class="">The sleek design immediately caught my eye, and the
-                                                    functionality sealed the deal. It's not just eye candy; it
-                                                    performs
-                                                    exceptionally well -- <a href="javascript:void(0);"
-                                                        class="fw-semibold text-fixed-white op-6 fs-11"
-                                                       >Read
-                                                        More</a></span>
-                                                <div class="d-flex align-items-center justify-content-between mt-2">
-                                                    <div class="">
-                                                        <span class="op-8 d-block text-fiexd-white">Rating : </span>
-                                                        <span class="text-warning d-block">
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                            <i class="ri-star-half-line"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="">
-                                                        <span class="text-success fs-12">12 Days Ago</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
-            
             <section class="section " id="contact">
                 <div class="container text-center">
                     <span class="landing-text-heading">Contact Us</span>
@@ -1550,56 +1018,59 @@
                         <div class="row text-start">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 pe-0">
                                 <div class="p-5 border-end">
-                                    <div class="row gy-3">
-                                        <div class="col-xl-6">
-                                            <div class="row gy-3">
-                                                <div class="col-xl-12">
-                                                    <label for="contact-address-name" class="form-label ">Full Name
-                                                        :</label>
-                                                    <input type="text" class="form-control"
-                                                        id="contact-address-name" placeholder="Enter Name">
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <label for="contact-address-phone" class="form-label ">Phone No
-                                                        :</label>
-                                                    <input type="text" class="form-control"
-                                                        id="contact-address-phone" placeholder="Enter Phone No">
-                                                </div>
-                                                <div class="col-xl-12">
-                                                    <label for="contact-address-address" class="form-label ">Address
-                                                        :</label>
-                                                    <textarea class="form-control" id="contact-address-address"
-                                                        rows="1"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6">
-                                            <label for="contact-address-message" class="form-label ">Message
-                                                :</label>
-                                            <textarea class="form-control" id="contact-address-message"
-                                                rows="8"></textarea>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="d-flex  mt-3">
-                                                <div class="">
-                                                    <div class="btn-list">
-                                                        <button class="btn btn-icon btn-info-light btn-wave">
-                                                            <i class="ri-facebook-line fw-bold"></i>
-                                                        </button>
-                                                        <button class="btn btn-icon btn-secondary-light btn-wave">
-                                                            <i class="ri-twitter-x-line fw-bold"></i>
-                                                        </button>
-                                                        <button class="btn btn-icon btn-special-light btn-wave">
-                                                            <i class="ri-instagram-line fw-bold"></i>
-                                                        </button>
+                                    <form action="{{ route('send-mail-support') }}" method="POST">
+                                        @csrf
+                                        <div class="row gy-3">
+                                            <div class="col-xl-6">
+                                                <div class="row gy-3">
+                                                    <div class="col-xl-12">
+                                                        <label for="contact-address-name" class="form-label ">Full Name
+                                                            :</label>
+                                                        <input type="text" class="form-control"
+                                                            id="contact-address-name" name="username" placeholder="Enter Name">
+                                                    </div>
+                                                    <div class="col-xl-12">
+                                                        <label for="contact-address-phone" class="form-label ">Phone No
+                                                            :</label>
+                                                        <input type="text" class="form-control"
+                                                            id="contact-address-phone" name="phone" placeholder="Enter Phone No">
+                                                    </div>
+                                                    <div class="col-xl-12">
+                                                        <label for="contact-address-address" class="form-label ">Address
+                                                            :</label>
+                                                        <textarea class="form-control" name="address" id="contact-address-address"
+                                                            rows="1"></textarea>
                                                     </div>
                                                 </div>
-                                                <div class="ms-auto">
-                                                    <button class="btn btn-primary  btn-wave">Send Message</button>
+                                            </div>
+                                            <div class="col-xl-6">
+                                                <label for="contact-address-message" class="form-label ">Message
+                                                    :</label>
+                                                <textarea class="form-control" name="message" id="contact-address-message"
+                                                    rows="8"></textarea>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <div class="d-flex  mt-3">
+                                                    <div class="">
+                                                        <div class="btn-list">
+                                                            <button class="btn btn-icon btn-info-light btn-wave">
+                                                                <i class="ri-facebook-line fw-bold"></i>
+                                                            </button>
+                                                            <button class="btn btn-icon btn-secondary-light btn-wave">
+                                                                <i class="ri-twitter-x-line fw-bold"></i>
+                                                            </button>
+                                                            <button class="btn btn-icon btn-special-light btn-wave">
+                                                                <i class="ri-instagram-line fw-bold"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ms-auto">
+                                                        <button type="submit" class="btn btn-primary btn-wave">Send Message</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 pe-0">
@@ -1650,22 +1121,16 @@
                                 <h6 class="fw-medium mb-3 text-fixed-white">PAGES</h6>
                                 <ul class="list-unstyled op-6 fw-normal landing-footer-list">
                                     <li>
-                                        <a href="mail.html" class="text-fixed-white">Email</a>
+                                        <a href="{{ route('ecommerce') }}" class="text-fixed-white">E-Commerce</a>
                                     </li>
                                     <li>
-                                        <a href="profile.html" class="text-fixed-white">Profile</a>
+                                        <a href="{{ route('profile') }}" class="text-fixed-white">Profile</a>
                                     </li>
                                     <li>
-                                        <a href="timeline.html" class="text-fixed-white">Timeline</a>
+                                        <a href="{{ route('timeline') }}" class="text-fixed-white">Timeline</a>
                                     </li>
                                     <li>
-                                        <a href="projects-list.html" class="text-fixed-white">Projects</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="text-fixed-white">Contacts</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="text-fixed-white">Portfolio</a>
+                                        <a href="{{ route('coming-soon') }}" class="text-fixed-white">Coming Soon</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1758,6 +1223,35 @@
             </div>
         </div>
     </div>
+    @if(session()->has('success'))
+    <script>
+        Swal.fire({
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonText: 'OK',
+        }).then(() => {
+            document.querySelectorAll('.swal2-success-circular-line-left, .swal2-success-fix, .swal2-success-circular-line-right').forEach(element => {
+                element.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+            });
+        });
+    </script>
+    @endif
+    @foreach([
+        'name',
+        'phone',
+        'address',
+        'message',
+    ] as $kalauError)
+        @error($kalauError)
+            <script>
+                Swal.fire({
+                    text: '{{ $message }}',
+                    icon: 'error',
+                    confirmButtonText: 'OK',
+                });
+            </script>
+        @enderror
+    @endforeach
 
     <div class="scrollToTop">
         <span class="arrow"><i class="ri-arrow-up-s-fill fs-20"></i></span>

@@ -175,15 +175,15 @@
                               <input type="text" class="form-control" placeholder="Search" aria-label="Search">
                           </div>
                           <div class="px-2 py-3 pb-0">
-                              @foreach($categories as $category)
-                              <div class="form-check mb-2">
-                                  <input class="form-check-input me-2" type="checkbox" value="" id="c-1">
-                                  <label class="form-check-label" for="c-1">
-                                      {{ $category->category_name }}
+                              @foreach($categories as $category => $d)
+                              <div class="form-check mb-2 category-item" style="display: {{ $category < 5 ? 'block' : 'none' }};">
+                                  <input class="form-check-input me-2" type="checkbox" value="" id="c-{{ $category + 1 }}">
+                                  <label class="form-check-label" for="c-{{ $category + 1 }}">
+                                      {{ $d->category_name }}
                                   </label>
                               </div>
                               @endforeach
-                              <a href="javascript:void(0);" class="text-decoration-underline text-primary">View All</a>
+                              <a href="javascript:void(0);" id="view-more-btn" class="text-decoration-underline text-primary">View All</a>
                           </div>
                       </div>
                       <div class="p-4 border-bottom">
@@ -219,28 +219,6 @@
                               <option value="Choice 3">Trends</option>
                           </select>
                       </div>
-                      <div class="p-4">
-                          <h6 class="fw-semibold mb-3">Color</h6>
-                          <div class="d-sm-flex"> <button
-                                  class="btn bg-primary-transparent border border-primary color-btn me-2 mb-1 d-flex align-items-center justify-content-center"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-secondary-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-danger-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-warning-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-success-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-purple-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-teal-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-info-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> <button
-                                  class="btn bg-pink-transparent color-btn me-2 mb-1"><i
-                                      class="ri-circle-fill fs-14"></i></button> </div>
-                      </div>
                       <div class="px-4 py-3 border-top text-center">
                           <button class="btn btn-secondary me-2 mb-2">Clear All</button>
                           <button class="btn btn-primary mb-2">Apply</button>
@@ -253,5 +231,19 @@
 
   </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const viewMoreBtn = document.getElementById('view-more-btn');
+        const categoryItems = document.querySelectorAll('.category-item');
 
+        if (viewMoreBtn) {
+            viewMoreBtn.addEventListener('click', function () {
+                categoryItems.forEach(item => {
+                    item.style.display = 'block'; // Tampilkan semua kategori
+                });
+                viewMoreBtn.style.display = 'none'; // Sembunyikan tombol "View More"
+            });
+        }
+    });
+</script>
 @endsection

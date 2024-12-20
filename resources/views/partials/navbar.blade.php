@@ -193,7 +193,10 @@
             <div class="d-flex align-items-center">
               <div class="me-xl-2 me-0">
                 @if(auth()->user())
-                <img src="{{ asset('assets/images/faces/').auth()->user()->profile }}" alt="img" class="avatar avatar-sm avatar-rounded">
+                @php
+                $userPhoto = auth()->user()->load('userDetails')->userDetails->profile_photo;
+                @endphp
+                <img src="{{ asset('storage/').'/user/'.$userPhoto }}" alt="img" class="avatar avatar-sm avatar-rounded">
                 @else
                 <img src="{{ asset('assets/images/faces/guest.jpg') }}" alt="img" class="avatar avatar-sm avatar-rounded">
                 @endif
@@ -237,7 +240,7 @@
             <li><a class="dropdown-item d-flex align-items-center" href="chat.html"><i
                         class="ti ti-headset text-warning me-2 fs-16"></i>Support</a>
             </li>
-            <li class="py-2 px-3"><a class="btn btn-primary btn-sm w-100" href="sign-up-basic.html">Log Out</a>
+            <li class="py-2 px-3"><a class="btn btn-primary btn-sm w-100" href="{{ route('logout') }}">Log Out</a>
             </li>
           </ul>
       </li>
