@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\SubscriptionInfo;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UserController;
@@ -25,7 +24,7 @@ Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
 Route::get('/reset-password', [DashboardController::class, 'resetPassword'])->name('reset-password');
 
 // Contoh tanpa middleware auth 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 // Users
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
