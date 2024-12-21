@@ -48,4 +48,20 @@ class RouteHelper
       'employee-events',
     ];
   }
+  public static function getUpdateRouteLists():array
+  {
+    return [
+      'websocket-chat',
+      'todo-list',
+      'purchasing-features',
+      'portfolio-showcase',
+    ];
+  }
+  public static function getTimelineRouteLists():array
+  {
+    return [
+      'timeline',
+      'timeline-create',
+    ];
+  }
 }

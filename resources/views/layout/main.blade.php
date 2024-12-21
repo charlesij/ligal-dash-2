@@ -14,6 +14,7 @@
     <link rel="icon" href="{{ asset('/assets/images/brand-logos/favicon.ico') }}" type="image/x-icon">
     <script src="{{ asset('/assets/libs/choices.js/public/assets/scripts/choices.min.js') }}"></script>
     <script src="{{ asset('/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link id="style" href="{{ asset('/assets/libs/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" >
     <link href="{{ asset('/assets/css/styles.css') }}" rel="stylesheet" >
     <link href="{{ asset('/assets/css/icons.css') }}" rel="stylesheet" >
@@ -717,5 +718,30 @@
 
     <!-- Custom-Switcher JS -->
     <script src="{{ asset('/assets/js/custom-switcher.min.js') }}"></script>
+    @if(session()->has('success'))
+    <script>
+        Swal.fire({
+            text: "{!! session('success') !!}",
+            icon: 'success',
+            confirmButtonText: 'OK',
+        }).then(() => {
+            document.querySelectorAll('.swal2-success-circular-line-left, .swal2-success-fix, .swal2-success-circular-line-right').forEach(element => {
+                element.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+            });
+        });
+    </script>
+    @elseif(session()->has('error'))
+    <script>
+        Swal.fire({
+            text: "{!! session('error') !!}",
+            icon: 'error',
+            confirmButtonText: 'OK',
+        }).then(() => {
+            document.querySelectorAll('.swal2-success-circular-line-left, .swal2-success-fix, .swal2-success-circular-line-right').forEach(element => {
+                element.style.backgroundColor = 'rgba(255, 255, 255, 0)';
+            });
+        });
+    </script>
+    @endif
   </body>
 </html> 

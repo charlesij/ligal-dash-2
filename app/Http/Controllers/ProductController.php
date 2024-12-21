@@ -207,6 +207,12 @@ class ProductController extends Controller
             'byCategories' => $productsRelated,
         ]);
     }
+    public function deleteProduct($id)
+    {
+        $data = Product::where('id', $id)->first();
+        $data->delete();
+        return redirect(route('product-list'))->with('success', 'Delete Product Success');
+    }
     public function addCategory()
     {
         return view('ecommerce.product.add-category');

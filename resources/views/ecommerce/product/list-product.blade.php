@@ -240,9 +240,13 @@
                                           <a href="{{ route('edit-product', ['id' => $data->id ]) }}" class="btn btn-icon btn-sm btn-primary-light">
                                             <i class="ri-edit-line"></i>
                                           </a>
-                                          <a href="javascript:void(0);" class="btn btn-icon btn-sm btn-danger-light product-btn">
-                                            <i class="ri-delete-bin-line"></i>
-                                          </a>
+                                          <form id="confim-delete-{{ $data->id }}" action="/product/{{ $data->id }}" method="POST">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit" onclick="confirmDelete(event, '{{ $data->id }}')" class="btn btn-icon btn-sm btn-danger-light product-btn">
+                                                <i class="ri-delete-bin-line"></i>
+                                            </button>
+                                          </form>
                                         </div>
                                       </td>
                                   </tr>
@@ -290,5 +294,28 @@
 
   </div>
 </div>
+
+<script>
+    function confirmDelete(event, id) {
+        event.preventDefault();
+    
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                if(document.getElementById('confirm-delete-' + id))
+                {
+                    console.log(`confirm-delete-${id} ditekan`)
+                };
+            }
+        });
+    }
+</script>
 
 @endsection

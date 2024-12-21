@@ -51,9 +51,9 @@
                 <li class="slide">
                     <a href="{{ route('products') }}" class="side-menu__item {{ request()->routeIs(RouteHelper::getProductRouteLists()) ? 'active' : '' }}">Products</a>
                 </li>
-                <li class="slide">
+                {{-- <li class="slide">
                     <a href="{{ route('wishlist') }}" class="side-menu__item {{ request()->routeIs('wishlist') ? 'active' : '' }}">Wishlist</a>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <li class="slide has-sub {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'open' : '' }}">
@@ -76,7 +76,7 @@
                 <li class="slide">
                   <a href="{{ route('mail') }}" class="side-menu__item {{ request()->routeIs('mail') ? 'active' : '' }}">Mail</a>
                 </li>
-                <li class="slide">
+                {{-- <li class="slide">
                     <a href="{{ route('task-manager') }}" class="side-menu__item {{ request()->routeIs('task-manager') ? 'active' : '' }}">Task Manager</a>
                 </li>
                 <li class="slide">
@@ -84,7 +84,7 @@
                 </li>
                 <li class="slide">
                     <a href="{{ route('user-support') }}" class="side-menu__item {{ request()->routeIs('user-support') ? 'active' : '' }}">Support</a>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <li class="slide has-sub {{ request()->routeIs(RouteHelper::getOfficeRouteLists()) ? 'open' : '' }}">
@@ -109,7 +109,9 @@
                 </li>
                 <li class="slide">
                     <a href="{{ route('employee') }}" class="side-menu__item {{ request()->routeIs('employee') ? 'active' : '' }}">Employee</a>
-                    {{-- <a href="{{ route('profile') }}" class="side-menu__item {{ request()->routeIs('profile') ? 'active' : '' }}">Employee</a> --}}
+                </li>
+                <li class="slide">
+                    <a href="{{ route('meeting-schedules') }}" class="side-menu__item {{ request()->routeIs('meeting-schedules') ? 'active' : '' }}">Meeting Schedules</a>
                 </li>
 
             </ul>
@@ -120,7 +122,7 @@
         </li>
 
         <li class="slide">
-          <a href="{{ route('timeline') }}" class="side-menu__item {{ request()->routeIs('timeline') ? 'active' : '' }}">
+          <a href="{{ route('timeline') }}" class="side-menu__item {{ request()->routeIs(RouteHelper::getTimelineRouteLists()) ? 'active' : '' }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-timeline side-menu__icon">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M4 16l6 -7l5 5l5 -6" />
@@ -133,8 +135,8 @@
           </a>
         </li>
 
-        <li class="slide has-sub {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'open' : '' }}">
-          <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'active' : '' }}">
+        <li class="slide has-sub {{ request()->routeIs(RouteHelper::getUpdateRouteLists()) ? 'open' : '' }}">
+          <a href="javascript:void(0);" class="side-menu__item {{ request()->routeIs(RouteHelper::getUpdateRouteLists()) ? 'active' : '' }}">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-progress side-menu__icon">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M10 20.777a8.942 8.942 0 0 1 -2.48 -.969" />
@@ -146,7 +148,7 @@
             <span class="side-menu__label">Updates</span>
             <i class="ri-arrow-right-s-line side-menu__angle"></i>
           </a>
-          <ul class="slide-menu child1" style="{{ request()->routeIs(RouteHelper::getUsersRouteLists()) ? 'display:block' : '' }}">
+          <ul class="slide-menu child1" style="{{ request()->routeIs(RouteHelper::getUpdateRouteLists()) ? 'display:block' : '' }}">
               <li class="slide side-menu__label1">
                   <a href="javascript:void(0)">Updates</a>
               </li>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectTimelineController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\UserController;
@@ -24,7 +25,7 @@ Route::get('/logout', [DashboardController::class, 'logout'])->name('logout');
 Route::get('/reset-password', [DashboardController::class, 'resetPassword'])->name('reset-password');
 
 // Contoh tanpa middleware auth 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 // Users
 Route::get('/profile', [UserController::class, 'profile'])->name('profile');
@@ -47,15 +48,19 @@ Route::post('/add-product', [ProductController::class, 'storeProduct'])->name('c
 Route::get('/product-list', [ProductController::class, 'productList'])->name('product-list');
 Route::get('/edit-product/{id}', [ProductController::class, 'editProduct'])->name('edit-product');
 Route::post('/edit-product/{id}', [ProductController::class, 'updateProduct'])->name('update-product');
+Route::delete('/product/{id}', [ProductController::class, 'deleteProduct'])->name('delete-product');
 Route::get('/product-details/{id}', [ProductController::class, 'productDetails'])->name('product-details');
 Route::get('/wishlist', [ProductController::class, 'wishlist'])->name('wishlist');
 
 // Office 
 Route::get('/employee', [OfficeController::class, 'employee'])->name('employee');
+Route::get('/meeting-schedules', [OfficeController::class, 'meetingSchedules'])->name('meeting-schedules');
 Route::get('/cek_ip', [ProductController::class, 'cekIp']);
 
 // Coming Soon
 Route::get('/coming-soon', [SubscriptionInfoController::class, 'comingSoon'])->name('coming-soon');
 Route::post('/storesubsemails', [SubscriptionInfoController::class, 'storeEmails'])->name('subscription-emails');
-Route::get('/patch-timeline', [DashboardController::class, 'timeline'])->name('timeline');
+Route::get('/patch-timeline', [ProjectTimelineController::class, 'timeline'])->name('timeline');
+Route::post('/patch-timeline', [ProjectTimelineController::class, 'store']);
+Route::get('/patch-timeline/create', [ProjectTimelineController::class, 'create'])->name('timeline-create');
 

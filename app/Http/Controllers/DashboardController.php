@@ -186,8 +186,5 @@ class DashboardController extends Controller
         return 'kamu mau reset? Sini om crotin';
     }
 
-    public function timeline()
-    {
-        return view('dashboard.patch-timeline');
-    }
+
 }

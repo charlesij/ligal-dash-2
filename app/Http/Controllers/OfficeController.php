@@ -10,4 +10,8 @@ class OfficeController extends Controller
     {
         return view('office.employee');
     }
+    public function meetingSchedules()
+    {
+        return view('office.meeting');
+    }
 }
