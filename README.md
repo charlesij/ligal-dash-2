@@ -28,5 +28,8 @@ Join us on our journey to innovate, create, and inspire! 🚀
 - **NodeJS**
 - **ExpressJS**
 - **ReactJS**
+- **React-Native**
+- **Expo**
 - **NextJS**
 - **Swagger Documentation**
+- **Docker**
